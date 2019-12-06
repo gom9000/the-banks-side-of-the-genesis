@@ -1,0 +1,7 @@
+# build
+*.log
+
+#resources
+*.mp3
+*.ac3
+*.wav
