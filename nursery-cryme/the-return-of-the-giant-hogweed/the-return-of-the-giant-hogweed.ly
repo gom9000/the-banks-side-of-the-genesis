@@ -69,108 +69,124 @@ restIntro = \relative c {
 % --  TEMA ONE  ---------------------------------------------------------------------------------------------
 % -----------------------------------------------------------------------------------------------------------
 hammondTemaOneARight = \relative c'' {
-    <bes d>4 					r8 <a c g'>8~	 			<a c g'>4					<bes d g>4
+    <bes d g>4 					r8 <a c g'>8~	 			<a c g'>4					<bes d g>4
 	r8 <c ees g>8~				<c ees g>4					<bes d g>4					<a c g'>4
-    <bes d g>4 					r8 <a d g>8~	 			<a d g>4					<bes d g>4
+    <bes d g>4 					r8 <a c g>8~	 			<a c g>4					<bes d g>4
 	r8 <c ees g>8~				<c ees g>4					<bes d g>4					<a c g'>4
 }
 hammondTemaOneBRight = \relative c'' {
-	<a d fis>2					r4
-	\times 2/3 { <a cis e>8 <a cis e>8 <a cis e>8 }
-	<a d fis>2					r4
-	\times 2/3 { <a cis e>8 <a cis e>8 <a cis e>8 }
-	<a d fis>2					r4
-	\times 2/3 { <a cis e>8 <a cis e>8 <a cis e>8 }
-	<a d fis>2					
+	<a d fis>2					r4	\times 2/3 { <a cis e>8 <a cis e>8 <a cis e>8 }
+	<a d fis>2					r4	\times 2/3 { <a cis e>8 <a cis e>8 <a cis e>8 }
+	<a d fis>2					r4	\times 2/3 { <a cis e>8 <a cis e>8 <a cis e>8 }
+	<a d fis>2					r2
 }
 hammondTemaOneCRight = \relative c'' {
-	<a d fis>2					r4
-	\times 2/3 { <a cis e>8 <a cis e>8 <a cis e>8 }
-	<a d fis>2					r4
-	\times 2/3 { <a cis e>8 <a cis e>8 <a cis e>8 }
-	<a d fis>2					r4
-	\times 2/3 { <a cis e>8 <a cis e>8 <a cis e>8 }
-	<a d fis>4 r4		
+	<a d fis>2					r4	\times 2/3 { <a cis e>8 <a cis e>8 <a cis e>8 }
+	<a d fis>2					r4	\times 2/3 { <a cis e>8 <a cis e>8 <a cis e>8 }
+	<a d fis>2					r4	\times 2/3 { <a cis e>8 <a cis e>8 <a cis e>8 }
+	<a d fis>4 r4				\times 2/3 { <f bes des>4 <f bes des>4 <f bes des>4 }
 }
-hammondTemaOneDRight = \relative c' {	
-	\times 2/3 { <f bes des>4 <f bes des>4 <f bes des>4 }
+hammondTemaOneDRight = \relative c' {
 	<f bes des>4  \times 2/3 { <f a c>4 <f a c>8~ }
 	\times 2/3 { <f a c>4 <e g c>8 }   \times 2/3 { <f a c>4 <e g c>8 }
-	<f a c>8 r8 <f a c>8 r8	    
 
+	<f a c>8 r8 <f a c>8 r8	  
 	\times 2/3 { <f bes des>4 <f bes des>4 <f bes des>4 }
-	<f bes des>4  \times 2/3 { <f a c>4 <f a c>8~ }
-	\times 2/3 { <f a c>4 <e g c>8 }   \times 2/3 { <f a c>4 <e g c>8 }
-	<f a c>8 r8 <f a c>8 r8	    
 
-	\times 2/3 { <f bes des>4 <f bes des>4 <f bes des>4 }
 	<f bes des>4  \times 2/3 { <f a c>4 <f a c>8~ }
 	\times 2/3 { <f a c>4 <e g c>8 }   \times 2/3 { <f a c>4 <e g c>8 }
-	<f a c>8 r8 <f a c>8 r8	    
+
+	<f a c>8 r8 <f a c>8 r8
+	\times 2/3 { <f bes des>4 <f bes des>4 <f bes des>4 }
+
+	<f bes des>4  \times 2/3 { <f a c>4 <f a c>8~ }
+	\times 2/3 { <f a c>4 <e g c>8 }   \times 2/3 { <f a c>4 <e g c>8 }  
 }
-hammondTemaOneALeft = \relative c' {
-    <g bes d>4	 				r8 <g a c>8~ 				<g a c>8	<g a c>8		<g bes d>4
-	r8 <g c ees>8~ 				<g c ees>8	<g c ees>8		<g bes d>8 r8				<g a c>4
-    <g bes d>4	 				r8 <f a d>8~ 				<f a d>8	<f a d>8		<g bes d>4
-	r8 <g c ees>8~ 				<g c ees>8	<g c ees>8		<g bes d>8 r8				<g a c>4
-}
-hammondTemaOneBLeft = \relative c {
-	<fis a d>2					r4
-	<a cis e>8 r8
-	<fis a d>2					r4
-	<a cis e>8 r8
-	<fis a d>2					r4
-	<a cis e>8 r8
-	<fis a d>2					
-}
-hammondTemaOneCLeft = \relative c {
-	<fis a d>2					r4
-	<a cis e>8 r8
-	<fis a d>2					r4
-	<a cis e>8 r8
-	<fis a d>2					r4
-	<a cis e>8 r8
-	<fis a d>4 r4
-}
-hammondTemaOneDLeft = \relative c' {	
-	\times 2/3 { bes4 bes4 bes4 }
-	bes4  \times 2/3 { a4 a8~ }
-	\times 2/3 { a4 g8 }   \times 2/3 { a4 g8 }
- 	a8 r8 a8 r8	    			
-	
-	\times 2/3 { bes4 bes4 bes4 }
-	bes4  \times 2/3 { a4 a8~ }
-	\times 2/3 { a4 g8 }   \times 2/3 { a4 g8 }
- 	a8 r8 a8 r8	        			
-	
-	\times 2/3 { bes4 bes4 bes4 }
-	bes4  \times 2/3 { a4 a8~ }
-	\times 2/3 { a4 g8 }   \times 2/3 { a4 g8 }
- 	a8 r8 a8 r8	    	
-}
-hammondTemaOneStaccoRight = \relative c'' {
+hammondTemaOneERight = \relative c' {
+    \time 2/4
+    <f a c>8 r8 <f a c>8 r8
     \times 2/3 { <bes des f>4 <aes bes ees>4 <ges bes des>4 }
 	\times 2/3 { <bes des f>4 <aes bes ees>4 <ges bes des>4 }
 	<f a c>4 r4
 	\times 2/3 { g,8  a8 bes }		\times 2/3 { d g ees }
 }
-hammondTemaOneStaccoLeft = \relative c' {
+hammondTemaOneERightBis = \relative c' {
+    <f a c>8 r8 <f a c>8 r8
+	\times 2/3 { <f bes des>4 <f bes des>4 <f bes des>4 }
+
+	<f bes des>4  \times 2/3 { <f a c>4 <f a c>8~ }
+	\times 2/3 { <f a c>4 <e g c>8 }   \times 2/3 { <f a c>4 <e g c>8 }
+
+	\time 2/4
+    <f a c>8 r8 <f a c>8 r8
+}
+hammondTemaOneALeft = \relative c' {
+    <g bes d>4	 				r8 <g a c>8~ 				<g a c>8	<g a c>8		<g bes d>4
+	r8 <g c ees>8~ 				<g c ees>8	<g c ees>8		<g bes d>8 r8				<g a c>4
+    <g bes d>4	 				r8 <g a c>8~ 				<g a c>8	<g a c>8		<g bes d>4
+	r8 <g c ees>8~ 				<g c ees>8	<g c ees>8		<g bes d>8 r8				<g a c>4
+}
+hammondTemaOneBLeft = \relative c {
+	<fis a d>2					r4	<a cis e>8 r8
+	<fis a d>2					r4	<a cis e>8 r8
+	<fis a d>2					r4	<a cis e>8 r8
+	<fis a d>2					r2				
+}
+hammondTemaOneCLeft = \relative c {
+	<fis a d>2					r4	<a cis e>8 r8
+	<fis a d>2					r4	<a cis e>8 r8
+	<fis a d>2					r4	<a cis e>8 r8
+	<fis a d>4 r4				\times 2/3 { bes4 bes4 bes4 }
+}
+hammondTemaOneDLeft = \relative c' {
+	bes4  \times 2/3 { a4 a8~ }
+	\times 2/3 { a4 g8 }   \times 2/3 { a4 g8 }
+
+ 	a8 r8 a8 r8	    			
+	\times 2/3 { bes4 bes4 bes4 }
+
+	bes4  \times 2/3 { a4 a8~ }
+	\times 2/3 { a4 g8 }   \times 2/3 { a4 g8 }
+
+ 	a8 r8 a8 r8	        			
+	\times 2/3 { bes4 bes4 bes4 }
+
+	bes4  \times 2/3 { a4 a8~ }
+	\times 2/3 { a4 g8 }   \times 2/3 { a4 g8 }
+}
+hammondTemaOneELeft = \relative c' {
+    \time 2/4
+ 	a8 r8 a8 r8
     \times 2/3 { bes4 aes4 ges4 }
 	\times 2/3 { bes4 aes4 ges4 }
 	f4 r4
-	r2
+	r2	
+}
+hammondTemaOneELeftBis = \relative c' {
+ 	a8 r8 a8 r8	        			
+	\times 2/3 { bes4 bes4 bes4 }
+
+	bes4  \times 2/3 { a4 a8~ }
+	\times 2/3 { a4 g8 }   \times 2/3 { a4 g8 }
+
+	\time 2/4
+ 	a8 r8 a8 r8
 }
 restTemaOne = \relative c' {
     r1 r1 r1 r1
-    
-	\time 2/4
-		<a d fis>2					r4
-	\times 2/3 { <a cis e>8 <a cis e>8 <a cis e>8 }
-	<a d fis>2					r4
-	\times 2/3 { <a cis e>8 <a cis e>8 <a cis e>8 }
-	<a d fis>2					r4
-	\times 2/3 { <a cis e>8 <a cis e>8 <a cis e>8 }
-	<a d fis>2			
+    r1 r1 r1 r1
+	r1 r1 r1 r1
+	r1 r1 r1 r1
+	r1 r1 r1 r1 r1
+	\time 2/4 r2 r2 r2 r2 r2
+}
+restTemaOneBis = \relative c' {
+    r1 r1 r1 r1
+    r1 r1 r1 r1
+	r1 r1 r1 r1
+	r1 r1 r1 r1
+	r1 r1 r1 r1 r1
+	r1 r1 r1 \time 2/4 r2
 }
 % -----------------------------------------------------------------------------------------------------------
 % --  TEMA TWO  ---------------------------------------------------------------------------------------------
@@ -180,7 +196,7 @@ hammondTemaTwoARight = \relative c' {
 	r2
 	r2
 	r2
-\pageBreak
+
 	<f bes d>2
 	<g bes ees>2
 	<f a c>2
@@ -273,33 +289,43 @@ hammondTemaTwoELeft = \relative c' {
 	<g d'>8 r8								<g d'>8 r8							<g d'>8 <g d'>8							\times 2/3 { r8 <g d'>8 r8}
 	<g d'>8 r8								<g d'>8 r8							<g d'>8 <g d'>8							\times 2/3 { r8 <g d'>8 r8}
 	<g d'>8 r8								<g d'>8 r8							<g d'>8 <g d'>8							\times 2/3 { r8 <g d'>8 r8}
-	<g d'>8 r8								<g d'>8 r8							<g d'>8 r8								\times 2/3 { <g d'>8 r8 <g d'>8}
+	<g d'>8 r8								<g d'>8 r8							<g d'>8 r8								\times 2/3 { <g c>8 r8 <g d'>8}
 
-	r4										\times 2/3 { <g d'>8 r8 <g d'>8 }	r4										\times 2/3 { <g d'>8 r8 <g d'>8 }
-	r4										\times 2/3 { <g d'>8 r8 <g d'>8 }	r4										\times 2/3 { <g d'>8 r8 <g d'>8 }
-	r4										\times 2/3 { <g d'>8 r8 <g d'>8 }	r4										\times 2/3 { <g d'>8 r8 <g d'>8 }
-	r4										\times 2/3 { <g d'>8 r8 <g d'>8 }	r4										\times 2/3 { <g d'>8 r8 <g d'>8 }
+	r4										\times 2/3 { <g d'>8 r8 <g d'>8 }	r4										\times 2/3 { <g c>8 r8 <g d'>8 }
+	r4										\times 2/3 { <g d'>8 r8 <g d'>8 }	r4										\times 2/3 { <g c>8 r8 <g d'>8 }
+	r4										\times 2/3 { <g d'>8 r8 <g d'>8 }	r4										\times 2/3 { <g c>8 r8 <g d'>8 }
+	r4										\times 2/3 { <g d'>8 r8 <g d'>8 }	r4										\times 2/3 { <g c>8 r8 <g d'>8 }
+}
+restTemaTwo = \relative c' {
+    r2 r2 r2 r2		r2 r2 r2 r2 r2 r2 r2
+	r1 r1 r1 r1 r1 r1 r1
+	r1 r1 r1 r1
+	r2.
+	r1 r1 r1 r1
+	r2.
+	r1 r1 r1 r1 r1 r1 r1 r1 r1
+	r1 r1 r1 r1
 }
 % -----------------------------------------------------------------------------------------------------------
 % --  HOGWEED DANCE  ----------------------------------------------------------------------------------------
 % -----------------------------------------------------------------------------------------------------------
 rmiHogweedDanceARight = \relative c'' {
-	\times 2/3 {f8 f, c'}	\times 2/3 {e e, b'}		\times 2/3 {f' f, c'}			\times 2/3 {d d, a'}
-	\times 2/3 {e' e, b'}	\times 2/3 {c c, g'}		\times 2/3 {d' d, a'}			\times 2/3 {e' e, b'}
-	\times 2/3 {f' f, c'}	\times 2/3 {e e, b'}		\times 2/3 {f' f, c'}			\times 2/3 {d d, a'}
-	\times 2/3 {e' e, b'}	\times 2/3 {c c, g'}		\times 2/3 {d' d, a'}			\times 2/3 {e' e, b'}
+	\times 2/3 {f8 c f,}	\times 2/3 {e' b e,}		\times 2/3 {f' c f,}			\times 2/3 {d' a d,}
+	\times 2/3 {e' b e,}	\times 2/3 {c' g c,}		\times 2/3 {d' a d,}			\times 2/3 {e' b e,}
+	\times 2/3 {f' c f,}	\times 2/3 {e' b e,}		\times 2/3 {f' c f,}			\times 2/3 {d' a d,}
+	\times 2/3 {e' b e,}	\times 2/3 {c' g c,}		\times 2/3 {d' a d,}			\times 2/3 {e' b e,}
 }
 rmiHogweedDanceBRight = \relative c'' {
-	\times 2/3 {aes' aes, c}	\times 2/3 {ges' ges, bes}		\times 2/3 {aes' aes, c}		\times 2/3 {f f, aes}
-	\times 2/3 {ges' ges, bes}	\times 2/3 {ees ees, ges}		\times 2/3 {f' f, aes}			\times 2/3 {ges' ges, bes}
-	\times 2/3 {aes' aes, c}	\times 2/3 {ges' ges, bes}		\times 2/3 {aes' aes, c}		\times 2/3 {f f, aes}
-	\times 2/3 {ges' ges, bes}	\times 2/3 {ees ees, ges}		\times 2/3 {f' f, aes}			\times 2/3 {ges' ges, bes}
+	\times 2/3 {aes' c, aes}	\times 2/3 {ges' bes, ges}		\times 2/3 {aes' c, aes}		\times 2/3 {f' aes, f}
+	\times 2/3 {ges' bes, ges}	\times 2/3 {ees' ges, ees}		\times 2/3 {f' aes, f}			\times 2/3 {ges' bes, ges}
+	\times 2/3 {aes' c, aes}	\times 2/3 {ges' bes, ges}		\times 2/3 {aes' c, aes}		\times 2/3 {f' aes, f}
+	\times 2/3 {ges' bes, ges}	\times 2/3 {ees' ges, ees}		\times 2/3 {f' aes, f}			\times 2/3 {ges' bes, ges}
 }
 rmiHogweedDanceCRight = \relative c'' {
-	\times 2/3 {aes' aes, c}	\times 2/3 {g' g, bes}			\times 2/3 {aes' aes, c}		\times 2/3 {f f, aes}
-	\times 2/3 {g' g, bes}		\times 2/3 {ees ees, g}			\times 2/3 {f' f, aes}			\times 2/3 {g' g, bes}
-	\times 2/3 {aes' aes, c}	\times 2/3 {g' g, bes}			\times 2/3 {aes' aes, c}		\times 2/3 {f f, aes}
-	\times 2/3 {g' g, bes}		\times 2/3 {ees ees, g}			\times 2/3 {f' f, aes}			\times 2/3 {g' g, bes}
+	\times 2/3 {aes' c, aes}	\times 2/3 {g' bes, g}			\times 2/3 {aes' c, aes}		\times 2/3 {f' aes, f}
+	\times 2/3 {g' bes, g}		\times 2/3 {ees' g, ees}		\times 2/3 {f' aes, f}			\times 2/3 {g' bes, g}
+	\times 2/3 {aes' c, aes}	\times 2/3 {g' bes, g}			\times 2/3 {aes' c, aes}		\times 2/3 {f' aes, f}
+	\times 2/3 {g' bes, g}		\times 2/3 {ees' g, ees}		\times 2/3 {f' aes, f}			\times 2/3 {g' bes, g}
 }
 rmiHogweedDanceALeft = \relative c {
     <c c,>1~
@@ -326,52 +352,31 @@ rmiHogweedDanceDLeft = \relative c {
 	<ees ees,>1
 }
 rmiHogweedDanceCbisLeft = \relative c {
-    f,1
-	<c' f>1
-    f,1
-	<c' f>1
+    f,2		<c' f>2
+    f,2		<c' f>2
+
+	f,2		<c' f>2
+    f,2		<c' f>2
 }
 rmiHogweedDanceDbisLeft = \relative c {
-    ees,1
-	<bes' ees>1
-    ees,1
-	<bes' ees>1
-}
-% -----------------------------------------------------------------------------------------------------------
-% -----------------------------------------------------------------------------------------------------------
-pianetDanceRight = {
-    \clef violin
-	\key c \major
-	\time 4/4
+    ees,2	<bes' ees>2
+    ees,2	<bes' ees>2
 
-	\bar "|:"
-	\rmiHogweedDanceARight
-	\rmiHogweedDanceBRight
-	\break
-	\bar ":|"
-	\rmiHogweedDanceCRight
-	\rmiHogweedDanceCRight
-	\break
-	\bar "|:"
-	\mark \markup { \tiny { "                                   4 volte" } }
-	\rmiHogweedDanceCRight
-	\rmiHogweedDanceCRight
-	\bar ":|"
-	\pageBreak
+	ees,2	<bes' ees>2
+    ees,2	<bes' ees>2
 }
-
-pianetDanceLeft = {
-    \clef bass
-	\key c \major
-	\time 4/4
+pianetHogweedDanceRest = \relative c {
+    r1 r1 r1 r1
+	r1 r1 r1 r1
+	r1 r1 r1 r1
+	r1 r1 r1 r1
+	r1 r1 r1 r1
+	r1 r1 r1 r1
 }
 % -----------------------------------------------------------------------------------------------------------
-% --  FINALE  -----------------------------------------------------------------------------------------------
+% --  BRIDGE  -----------------------------------------------------------------------------------------------
 % -----------------------------------------------------------------------------------------------------------
-% ----------------------------------------------------------------------------
-% INTERLUDIO
-% ----------------------------------------------------------------------------
-hammondFinaleInterludioARight = \relative c'' {
+hammondBridgeRight = \relative c'' {
     <des f aes>1~
 	<des f aes>1~
     <des f aes>1~
@@ -381,8 +386,7 @@ hammondFinaleInterludioARight = \relative c'' {
 	<c ees aes>1~
 	<c ees aes>1~
 	<c ees aes>1~
-}
-hammondFinaleInterludioBRight = \relative c'' {
+
     <des f aes>1~
 	<des f aes>1~
     <des f aes>1~
@@ -393,7 +397,7 @@ hammondFinaleInterludioBRight = \relative c'' {
 	<ces ees aes>1~
 	<bes ees g>1~
 }
-mellotronFinaleInterludio = \relative c'' {
+mellotronBridge = \relative c'' {
     aes4 g aes f
 	g ees f g
     aes4 g aes f
@@ -404,9 +408,13 @@ mellotronFinaleInterludio = \relative c'' {
     aes4 g aes f
 	g ees f g
 }
-% ----------------------------------------------------------------------------
-% FINALE
-% ----------------------------------------------------------------------------
+bridgeRest = \relative c'' {
+    r1 r1 r1 r1 r1 r1 r1 r1
+	r1 r1 r1 r1 r1 r1 r1 r1
+}
+% -----------------------------------------------------------------------------------------------------------
+% --  FINALE  -----------------------------------------------------------------------------------------------
+% -----------------------------------------------------------------------------------------------------------
 hammondFinaleARight = \relative c'' {
     <d f gis>1~
 	<cis f gis>1~
@@ -500,51 +508,13 @@ mellotronFinaleBbis = \relative c'' {
 	<f c'>4				r4 r4	<f c'>4~
 	<f c'>1\fermata
 }
-% -----------------------------------------------------------------------------------------------------------------------
-% -----------------------------------------------------------------------------------------------------------------------
-hammondFinaleRight = {
-    \clef violin
-	\key aes \major
-	\time 4/4
-
-	% --- INTERLUDIO
-    \hammondFinaleInterludioARight
-	\hammondFinaleInterludioBRight
-	\break
-
-	% --- FINALE
-	\key c \major
-	\hammondFinaleARight
-	\break
-	\hammondFinaleBRight
-	\break
-	\hammondFinaleARight
-	\break
-	\hammondFinaleBbisRight
-	\bar "|."
-}
-hammondFinaleLeft = {
-    \clef bass
-	\time 4/4
+finaleRest = \relative c'' {
+    r1 r1 r1 r1 r1 r1
+	r1 r1 r1 r1 r1 r1
+	r1 r1 r1 r1 r1 r1
 	r1 r1 r1 r1 r1 r1 r1 r1
 }
-mellotronFinale = {
-    \clef violin
-	\key aes \major
-	\time 4/4
 
-	% --- INTERLUDIO
-	\mellotronFinaleInterludio
-	\mellotronFinaleInterludio
-
-	% --- FINALE
-	\key c \major
-	\mellotronFinaleA
-	\mellotronFinaleB
-	\mellotronFinaleAbis
-	\mellotronFinaleBbis
-	\bar "|."
-}
 
 % ===========================================================================================================
 % --------------------------------------------  B U I L D  --------------------------------------------------
@@ -552,9 +522,8 @@ mellotronFinale = {
 hammondRight = {
     \clef violin
 	\time 4/4
-	\key c \major
+	\key g \minor
 	r1 ^\markup { \tiny {866866602 (perc. 3rd soft)} }
-
 
     % --- INTRO ---
 	\repeat volta 2 {
@@ -562,22 +531,16 @@ hammondRight = {
 	}
 	\break
 
-	\key g \minor
-
 	% --- TEMA ONE ---
 	\hammondTemaOneARight
-	\time 2/4
 	\hammondTemaOneBRight
-	r2
 	\break
-	\time 4/4
 	\hammondTemaOneARight
-	\time 2/4
 	\hammondTemaOneCRight
 	\break
 	\hammondTemaOneDRight
+	\hammondTemaOneERight
 	\break
-	\hammondTemaOneStaccoRight
 
 	% --- TEMA TWO ---
 	\hammondTemaTwoARight
@@ -592,39 +555,45 @@ hammondRight = {
 	\time 3/4 \relative c''' { aes8 g ees4 ges8 f }	\time 4/4
 	\break
 	\hammondTemaTwoERight
-	\bar ":|"
 	\pageBreak
 
 	% --- TEMA ONE ---
 	\hammondTemaOneARight
-	\time 2/4
 	\hammondTemaOneBRight
-	r2
-	\break
-	\time 4/4
 	\hammondTemaOneARight
-	\time 2/4
 	\hammondTemaOneCRight
-	\break
 	\hammondTemaOneDRight
-    \relative c' {
-	    \times 2/3 { <f ais cis>4 <f ais cis>4 <f ais cis>4 }
-	    <f ais cis>4  \times 2/3 { <f a c>4 <f a c>8~ }
-	    \times 2/3 { <f a c>4 <e g c>8 }   \times 2/3 { <f a c>4 <e g c>8 }
-	    <f a c>8 r8 <f a c>8 r8	   
-    }
-	\bar "||"
+	\hammondTemaOneERightBis
 	\break
 
 	% --- DANCE ---
+	\time 4/4
+	\pianetHogweedDanceRest
+	\break
+
+	% --- BRIDGE ---
+	\key aes \major
+	\hammondBridgeRight
+	\break
+
+	% --- FINALE ---
+	\key c \major
+	\hammondFinaleARight
+	\break
+	\hammondFinaleBRight
+	\break
+	\hammondFinaleARight
+	\break
+	\hammondFinaleBbisRight
+
+	\bar "|."
 }
 
 hammondLeft = {
     \clef bass
 	\time 4/4
-	\key c \major
+	\key g \minor
 	r1
-
 
     % --- INTRO ---
 	\repeat volta 2 {
@@ -632,19 +601,16 @@ hammondLeft = {
 	}
 	\break
 
-	\key g \minor
-
 	% --- TEMA ONE ---
 	\hammondTemaOneALeft
-	\time 2/4
 	\hammondTemaOneBLeft
-	r2
-	\time 4/4
+	\break
 	\hammondTemaOneALeft
-	\time 2/4
 	\hammondTemaOneCLeft
+	\break
 	\hammondTemaOneDLeft
-	\hammondTemaOneStaccoLeft
+	\hammondTemaOneELeft
+	\break
 
 	% --- TEMA TWO ---
 	\hammondTemaTwoALeft
@@ -655,35 +621,35 @@ hammondLeft = {
 	\hammondTemaTwoDLeft
 	\time 3/4 r2. \time 4/4
 	\hammondTemaTwoELeft
-	\bar ":|"
 
 	% --- TEMA ONE ---
 	\hammondTemaOneALeft
-	\time 2/4
 	\hammondTemaOneBLeft
-	r2
-	\time 4/4
 	\hammondTemaOneALeft
-	\time 2/4
 	\hammondTemaOneCLeft
 	\hammondTemaOneDLeft
-    \relative c' {
-	    \times 2/3 { bes4 bes4 bes4 }
-	    bes4  \times 2/3 { a4 a8~ }
-	    \times 2/3 { a4 g8 }   \times 2/3 { a4 g8 }
- 	    a8 r8 a8 r8
-	}
-	\bar "||"
+	\hammondTemaOneELeftBis
 
 	% --- DANCE ---
+	\time 4/4
+	\pianetHogweedDanceRest
+	\break
+
+	% --- BRIDGE ---
+	\key aes \major
+	\bridgeRest
+	\break
+
+	% --- FINALE ---
+	\key c \major
+
 }
 
 pianetRight = {
     \clef violin
 	\time 4/4
-	\key c \major
+	\key g \minor
     r1 ^\markup { \tiny {fuzz pianet} }
-
 	
 	% --- INTRO ---
 	\repeat volta 2 {
@@ -692,33 +658,46 @@ pianetRight = {
 	\break
 
 	% --- TEMA ONE ---
+	\restTemaOne
 	
 	% --- TEMA TWO ---
+	\restTemaTwo
+
 	% --- TEMA ONE ---
+	\restTemaOneBis
 
 	% --- DANCE ---
-	\bar "|:"
-	\rmiHogweedDanceARight
-	\rmiHogweedDanceBRight
+	\time 4/4
+	\repeat volta 2 {
+	    \rmiHogweedDanceARight
+	    \rmiHogweedDanceBRight
+	}
 	\break
-	\bar ":|"
 	\rmiHogweedDanceCRight
 	\rmiHogweedDanceCRight
 	\break
-	\bar "|:"
-	\mark \markup { \tiny { "                                   4 volte" } }
-	\rmiHogweedDanceCRight
-	\rmiHogweedDanceCRight
-	\bar ":|"
-	\pageBreak
+	\repeat volta 2 {
+	    \mark \markup { \tiny { "                                   4 volte" } }
+	    \rmiHogweedDanceCRight
+	    \rmiHogweedDanceCRight
+	}
+	\break
+
+	% --- BRIDGE ---
+	\key aes \major
+	\bridgeRest
+	\break
+
+	% --- FINALE ---
+	\key c \major
+
 }
 
 pianetLeft = {
     \clef bass
 	\time 4/4
-	\key c \major
+	\key g \minor
 	r1
-
 
 	% --- INTRO ---
 	\repeat volta 2 {
@@ -726,30 +705,44 @@ pianetLeft = {
 	}
 	\break
 
-
 	% --- TEMA ONE ---
+	\restTemaOne
 	
 	% --- TEMA TWO ---
+	\restTemaTwo
+
 	% --- TEMA ONE ---
+	\restTemaOneBis
 
     % --- DANCE ---
-	\bar "|:"
-	\rmiHogweedDanceALeft
-	\rmiHogweedDanceBLeft
-	\bar ":|"
+	\time 4/4
+	\repeat volta 2 {
+	    \rmiHogweedDanceALeft
+	    \rmiHogweedDanceBLeft
+	}
 	\rmiHogweedDanceCLeft
 	\rmiHogweedDanceDLeft
-	\bar "|:"
-	\rmiHogweedDanceCbisLeft
-	\rmiHogweedDanceDbisLeft
-	\bar ":|"
+	\repeat volta 2 {
+	    \rmiHogweedDanceCbisLeft
+	    \rmiHogweedDanceDbisLeft
+	}
+	\break
+
+	% --- BRIDGE ---
+	\key aes \major
+	\bridgeRest
+	\break
+
+	% --- FINALE ---
+	\key c \major
+
 }
 
 
 mellotron = {
     \clef violin
 	\time 4/4
-	\key c \major
+	\key g \minor
 	r1 ^\markup { \tiny {brass} }
 
 	% --- INTRO ---
@@ -758,13 +751,34 @@ mellotron = {
 	}
 	\break
 
-
 	% --- TEMA ONE ---
+	\restTemaOne
 	
 	% --- TEMA TWO ---
+	\restTemaTwo
+
 	% --- TEMA ONE ---
+	\restTemaOneBis
 
     % --- DANCE ---
+	\time 4/4
+	\pianetHogweedDanceRest
+	\break
+
+	% --- BRIDGE ---
+	\key aes \major
+	\mellotronBridge
+	\mellotronBridge
+	\break
+
+	% --- FINALE ---
+    \key c \major
+	\mellotronFinaleA
+	\mellotronFinaleB
+	\mellotronFinaleAbis
+	\mellotronFinaleBbis
+
+	\bar "|."
 }
 % ===========================================================================================================
 % ---------------------------------------------  B O O K  ---------------------------------------------------
@@ -786,21 +800,21 @@ mellotron = {
 
     \score {
 		<<
-		    \new PianoStaff = "Hammond" \with { midiInstrument = #"drawbar organ" }
+		    \new PianoStaff = "Hammond" \with { midiInstrument = #"rock organ" }
 	        <<
                 \set PianoStaff.instrumentName = "Hammond"
 	            \new Staff = upper \hammondRight
 	            \new Staff = lower \hammondLeft
             >>
 
-            \new PianoStaff = "RMI" \with {midiInstrument = #"acoustic guitar" }
+            \new PianoStaff = "RMI" \with {midiInstrument = #"electric grand" }
 		    <<
                 \set PianoStaff.instrumentName = "Pianet"
 	            \new Staff = upper \pianetRight
 	            \new Staff = lower \pianetLeft
             >>
 
-			\new Staff = "Mellotron" \with { midiInstrument = #"brass" }
+			\new Staff = "Mellotron" \with { midiInstrument = #"brass section" }
 	        <<
 		        \set Staff.instrumentName = "Mellotron"
 	            \mellotron
