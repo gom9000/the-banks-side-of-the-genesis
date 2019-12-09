@@ -8,4 +8,4 @@
 * [Seven Stones]
 * [Harold The Barrel]
 * [Harlequin]
-* [The Fountain of Salmacis]
+* [The Fountain of Salmacis](the-fountain-of-salmacis)
