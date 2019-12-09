@@ -780,6 +780,8 @@ mellotron = {
 
 	\bar "|."
 }
+
+
 % ===========================================================================================================
 % ---------------------------------------------  B O O K  ---------------------------------------------------
 % ===========================================================================================================
@@ -796,7 +798,6 @@ mellotron = {
 %		copyright   = "Copyright (c) 2017 Alessandro Fraschetti (mail: gos95@gommagomma.net)"
         tagline     = ""
     }
-
 
     \score {
 		<<
@@ -823,12 +824,6 @@ mellotron = {
 	    \layout { \context { \override VerticalAlignment #'forced-distance = #8 } }
 	    \midi { \context { \Score tempoWholesPerMinute = #(ly:make-moment 69 2) } }
     }
-
-
-%	            \new Staff = upper \hammondFinaleRight
-%	            \new Staff = lower \hammondFinaleLeft
-%	            \mellotronFinale
-
 
 	\paper{
 	    ragged-bottom = ##t
