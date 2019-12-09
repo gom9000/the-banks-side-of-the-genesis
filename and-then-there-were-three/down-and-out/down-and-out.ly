@@ -40,6 +40,30 @@
 % -----------------------------------------------------------------------------------------------------------
 % --  INTRO  ------------------------------------------------------------------------------------------------
 % -----------------------------------------------------------------------------------------------------------
+rsIntro = \relative c''' {
+               <b>1~
+               <b>1~
+
+  \time 6/4    <e, g b>1~          <b'>2~
+               <cis, e g b>1~      <b'>2~
+               <d, fis gis b>1~    <b'>2~
+               <b, d fis b>1~      <b'>2~
+
+  \time 5/4    <e, g b>1~          <b'>4~
+  \time 4/4    <cis, e g b>2       <cis e>2  %%%%%%%%
+
+  \break
+
+  \time 5/4
+  <fis, b dis>2~   <fis b dis>8~       <fis ais cis dis>2~  <fis ais cis dis>8~
+  <e gis b dis>2~  <e gis b dis>8~     <fis ais cis dis>2~  <fis ais cis dis>8~
+
+  <fis b dis>2~    <fis b dis>8~       <fis ais cis dis>2~  <fis ais cis dis>8~
+  <e gis b dis>2~  <e gis b dis>8~     <e a d>2~            <e a d>8~
+ 
+  <fis a d>1~       <fis a d>4~
+  <fis a d>1~		<e a cis>4
+}
 synthStringIntro = \relative c''' {
                <b>1~
                <b>1~
@@ -138,6 +162,30 @@ guitarIntro = \relative c' {
  
   d16 d16 a'16 a16 			d,16 d16 d'16 d16		d,16 d16 a'16 d,16			d16 d'8. 			d,8 r8
   d16 d16 a'16 a16 			d,16 d16 d'16 d16		d,16 d16 a'16 d,16			d16 d'8. 			d,8 r8
+}
+restIntro = \relative c' {
+               r1
+               r1
+
+  \time 6/4    r1                  r2
+               r1                  r2
+               r1                  r2
+               r1                  r2
+
+  \time 5/4    r1                  r4
+  \time 4/4    r1
+
+  \break
+
+  \time 5/4
+  r2 r8 r2 r8
+  r2 r8 r2 r8
+
+  r2 r8 r2 r8
+  r2 r8 r2 r8
+ 
+  r2 r8 r2 r8
+  r2 r8 r2 r8
 }
 % -----------------------------------------------------------------------------------------------------------
 % --  INTRO BRIDGE  -----------------------------------------------------------------------------------------
@@ -371,7 +419,7 @@ synthCoda = \relative c' {
 
 synthArcCoda = \relative c' {
   \time 4/4
-  <e g b>2..~    <e a cis>8~
+  <e g b>2..~ ^\markup { \tiny {orchestra} }   <e a cis>8~
   <e a cis>1
   <d fis b d>1~
   <d fis b d>1
@@ -420,7 +468,7 @@ synthArcFinaleOld = \relative c' {
 
 synthArcFinale = \relative c' {
   \time 3/4
-  <ees'>2.~
+  <ees'>2.~ ^\markup { \tiny {hi-strings} }
   \time 4/4
   <ees>1~
   <ees>1~
@@ -458,7 +506,7 @@ guitarPart = {
     \clef violin
 
     % INTRO
-    \time 4/4 r1 ^\markup { \tiny {alto strings/prosoloist pulsar} }
+    \time 4/4 r1 ^\markup { \tiny {mike guitar} }
     \bar "||"
     \guitarIntro
 
@@ -501,13 +549,13 @@ guitarPart = {
     \bar "|."
 }
 
-synthOnePart = {
+synthPart = {
     \clef violin
 
     % INTRO
-    \time 4/4 r1 ^\markup { \tiny {alto strings/prosoloist pulsar} }
+    \time 4/4 r1 ^\markup { \tiny {like prosoloist pulsar} }
     \bar "||"
-    \synthStringIntro
+    \restIntro
 
     % BRIDGE INTRO-TEMA
 	\synthStringBridgeIntroTema
@@ -543,53 +591,6 @@ synthOnePart = {
 
     % FINALE
 	\synthFinale
-
-
-    \bar "|."
-}
-
-synthTwoPart = {
-    \clef violin
-
-    % INTRO
-    \time 4/4 r1 ^\markup { \tiny {orchestra} }
-    \bar "||"
-    \synthArcIntro
-
-	% BRIDGE INTRO-TEMA
-	\synthArcBridgeIntroTema
-    \break
-
-    % TEMA A + B
-	\repeat volta 2 {
-	    \synthTemaA
-	    \break
-	    \synthTemaB
-	}
-	\break
-
-    % TEMA C
-	\synthArcTemaC
-	\break
-
-	% TEMA A + B
-	\synthTemaAbis
-	\synthTemaB
-	\break
-
-    % SOLO
-	\synthSolo
-	\break
-
-    % TEMA C
-	\synthArcTemaC
-	\break
-
-	% CODA
-	\synthArcCoda
-
-    % FINALE
-	\synthArcFinale
 
 
     \bar "|."
@@ -642,6 +643,53 @@ organPart = {
     \bar "|."
 }
 
+rsPart = {
+    \clef violin
+
+    % INTRO
+    \time 4/4 r1 ^\markup { \tiny {orchestra + hi-strings} }
+    \bar "||"
+    \rsIntro
+
+	% BRIDGE INTRO-TEMA
+	\synthArcBridgeIntroTema
+    \break
+
+    % TEMA A + B
+	\repeat volta 2 {
+	    \synthTemaA
+	    \break
+	    \synthTemaB
+	}
+	\break
+
+    % TEMA C
+	\synthArcTemaC
+	\break
+
+	% TEMA A + B
+	\synthTemaAbis
+	\synthTemaB
+	\break
+
+    % SOLO
+	\synthSolo
+	\break
+
+    % TEMA C
+	\synthArcTemaC
+	\break
+
+	% CODA
+	\synthArcCoda
+
+    % FINALE
+	\synthArcFinale
+
+
+    \bar "|."
+}
+
 
 % ===========================================================================================================
 % ---------------------------------------------  B O O K  ---------------------------------------------------
@@ -672,7 +720,7 @@ organPart = {
         \new Staff = "Synth" \with { midiInstrument = #"lead 2 (sawtooth)" } %% string ensemble 1" }
         <<
             \set Staff.instrumentName = \markup { "Synth" }
-            \synthOnePart
+            \synthPart
         >>
         \new Staff = "Organ" \with { midiInstrument = #"rock organ" }
         <<
@@ -681,8 +729,8 @@ organPart = {
         >>
         \new Staff = "Synth" \with { midiInstrument = #"synthstrings 1" }
         <<
-            \set Staff.instrumentName = \markup { "Synth" }
-            \synthTwoPart
+            \set Staff.instrumentName = \markup { "RS-202" }
+            \rsPart
         >>
     >>
     \layout { \context { \override VerticalAlignment #'forced-distance = #8 } }
