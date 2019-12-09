@@ -791,6 +791,7 @@ mellotron = {
         title       = \markup {\larger "THE RETURN OF THE GIANT HOGWEED"}
 	    subtitle    = ""
 	    subsubtitle = "from the album Nursery Cryme (1972)"
+		instrument  = "keyboards"
         composer    = "music by Genesis"
 	    arranger    = "(transcribed by gos95 for study purposes)"
         enteredby   = "gos95"
