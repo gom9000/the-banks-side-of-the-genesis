@@ -68,13 +68,10 @@ mellotronIntroB = \relative c' {
 	<a d fis a>1~\ff\>
 	<a d fis a>2 r2\!
 }
-
-
 % -----------------------------------------------------------------------------------------------------------
 % --  TEMA A  -----------------------------------------------------------------------------------------------
 % -----------------------------------------------------------------------------------------------------------
 hammondUpperTemaUno = \relative c'' {
-	\bar "|:"
     \repeat volta 2 {
 	    fis16 g fis g		e g e g			d g d g				cis, g' cis, fis
 	    e fis e fis			d fis d fis		cis fis cis fis		b, fis' b, e
@@ -113,7 +110,6 @@ hammondLowerTemaDue = \relative c' {
 	<a d fis>1
 }
 mellotronTemaDue = \relative c' {
-	\bar "|:"
     \repeat volta 2 {
         <b c e>2(		<a c e>2
 		<a b e>2		<g b e>2)
@@ -138,8 +134,7 @@ mellotronTemaDue = \relative c' {
     } {
 	    <a d fis>1~
 	}}
-		<a d fis>1
-			
+		<a d fis>1	
 }
 
 
@@ -202,7 +197,6 @@ hammondUpperTemaTreB = \relative c'' {
 	<gis cis f>2.~								<gis cis f>8 r8	<ais cis fis>8~ <ais cis fis>4 <gis cis f>8
 }
 hammondUpperTemaTreC = \relative c'' {
-	\bar "|:"
     \repeat volta 2 {
 	<ais cis fis>2.\p				<gis b dis>2.
 	<ais cis fis>2.					<gis b dis>2.
@@ -214,7 +208,6 @@ hammondUpperTemaTreC = \relative c'' {
 	<ais cis fis>2.~							<ais cis fis>8 r8 <gis cis f>8~ 	<gis cis f>4.
 	<ais cis fis>2.~							<ais cis fis>8 r8 <gis cis f>8~ 	<gis cis f>4 <ais cis fis>8
 	}
-	\bar ":|"
 }
 hammondUpperTemaTreD = \relative c'' {
 	<ais dis fis>1.~ 		<ais dis fis>1.
@@ -232,14 +225,12 @@ hammondUpperTemaTreD = \relative c'' {
 	<d fis a>2.		<b e gis>2.
 }
 hammondUpperTemaTreE = \relative c'' {
-	\bar "|:"
     \repeat volta 2 {
 		<cis f gis>2.~\mf				<cis f gis>4	<cis fis ais>8~ <cis fis ais>4.
 		<cis f gis>2.~					<cis f gis>4	<cis fis ais>8~ <cis fis ais>4 <cis f gis>8
 		<cis fis ais>2.~				<cis fis ais>4	<cis f gis>8~ 	<cis f gis>4.
 		<cis fis ais>2.~				<cis fis ais>4	<cis f gis>8~ 	<cis f gis>4 <cis fis ais>8
 	}
-	\bar ":|"
 }
 hammondUpperTemaTreF = \relative c'' {
 	<cis f gis>4\p\<<cis f gis>4	<cis fis ais>4			<dis gis b>4	<dis gis b>4	<dis fis ais>4
@@ -248,11 +239,12 @@ hammondUpperTemaTreF = \relative c'' {
 	<fis ais cis>4	<fis ais cis>4	<fis gis c>4			<fis ais cis>4	<fis ais cis>4	<fis c' dis>4\mf
 }
 hammondUpperTemaTreG = \relative c''' {
-	\bar "|:"
-	<b dis>8^\markup { \smaller "4 volte"} e <b dis> 		e <ais, cis> e'					<gis, b> e' <gis, b>		e' <ais, cis> e'
-	\bar ":|:"
-	<d fis>8^\markup { \smaller "3 volte"} g <d fis> 		g <cis, e> g'					<b, d> g' <b, d>			g' <cis, e> g'
-	\bar ":|"
+	\repeat volta 2 {
+	    <b dis>8^\markup { \smaller "4 volte"} e <b dis> 		e <ais, cis> e'					<gis, b> e' <gis, b>		e' <ais, cis> e'
+	}
+	\repeat volta 2 {
+	    <d fis>8^\markup { \smaller "3 volte"} g <d fis> 		g <cis, e> g'					<b, d> g' <b, d>			g' <cis, e> g'
+	}
     <d fis>8 g <d fis> 		g <cis, e> g'					<b, d> r4 	r4.
 }
 hammondUpperTemaTreH = \relative c'' {
@@ -356,9 +348,9 @@ hammondLowerFinale = \relative c {
 	\time 2/4
 	<gis c dis>2	<gis cis e>2	<a cis e>2
 	\time 4/4
-	\bar "|:"
-	<a d fis>1^\markup { \smaller "14 volte"}\f				<b e gis>1
-	\bar ":|"
+	\repeat volta 2 {
+	    <a d fis>1^\markup { \smaller "14 volte"}\f				<b e gis>1
+	}
 	<ais cis fis>1\fermata\>
     \bar "||"
 }
@@ -371,9 +363,9 @@ mellotronFinale = \relative c' {
 	\time 2/4
 	<gis c dis>2	<gis cis e>2	<a cis e>2
 	\time 4/4
-	\bar "|:"
-	<a d fis>1				<b e gis>1
-	\bar ":|"
+	\repeat volta 2 {
+	    <a d fis>1				<b e gis>1
+	}
 	<ais cis fis>1\fermata\>
     \bar "||"
 }
@@ -382,35 +374,6 @@ mellotronFinale = \relative c' {
 % ===========================================================================================================
 % --------------------------------------------  B U I L D  --------------------------------------------------
 % ===========================================================================================================
-pianet = {
-    \clef violin
-	\key e \minor
-	\time 4/4
-
-	% --- INTRO
-	\bar "|:"
-	r1 r1 r1 r1
-	\bar ":|"
-	\break
-	r1 r1 r1 r1 r1 r1
-	\break
-
-	% --- TEMA UNO
-	r1 r1 r1 r1 r1
-
-	% --- TEMA DUE
-	r1 r1 r1 r1 r1 r1 r1 r1 r1 r1 r1 r1 r1 r1 r1 
-	\override Score.RehearsalMark #'self-alignment-X = #RIGHT
-    \mark "D.C."
-	r1
-
-	% --- STACCO
-	\key c \major
-	\time 12/8
-	\pianoStacco
-	r1. r1. r1.
-}
-
 hammondUpper = {
     \clef violin
 	\key e \minor
@@ -418,9 +381,9 @@ hammondUpper = {
 
 	% --- INTRO
 	\mark \markup { \tiny { "               376868600" } }
-	\bar "|:"
-	\hammondUpperIntroA
-	\bar ":|"
+	\repeat volta 2 {
+	    \hammondUpperIntroA
+	}
 	\break
 	\hammondUpperIntroB
 
@@ -477,9 +440,9 @@ hammondLower = {
 	\time 4/4
 
 	% --- INTRO
-	\bar "|:"
-	r1 r1 r1 r1
-	\bar ":|"
+	\repeat volta 2 {
+	    r1 r1 r1 r1
+	}
 	\break
     r1 r1 r1 r1 r1 r1
 	\break
@@ -519,15 +482,44 @@ hammondLower = {
 	\bar "|."
 }
 
+pianet = {
+    \clef violin
+	\key e \minor
+	\time 4/4
+
+	% --- INTRO
+	\repeat volta 2 {
+	    r1 r1 r1 r1
+	}
+	\break
+	r1 r1 r1 r1 r1 r1
+	\break
+
+	% --- TEMA UNO
+	r1 r1 r1 r1 r1
+
+	% --- TEMA DUE
+	r1 r1 r1 r1 r1 r1 r1 r1 r1 r1 r1 r1 r1 r1 r1 
+	\override Score.RehearsalMark #'self-alignment-X = #RIGHT
+    \mark "D.C."
+	r1
+
+	% --- STACCO
+	\key c \major
+	\time 12/8
+	\pianoStacco
+	r1. r1. r1.
+}
+
 mellotron = {
     \clef violin
 	\key e \minor
 	\time 4/4
 
 	% --- INTRO
-	\bar "|:"
-	\mellotronIntroA
-	\bar ":|"
+	\repeat volta 2 {
+	    \mellotronIntroA
+	}
 	\break
 	\mellotronIntroB
 	\break
