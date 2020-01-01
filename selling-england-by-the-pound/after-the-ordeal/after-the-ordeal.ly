@@ -570,7 +570,7 @@ synthCorale = \relative c'' {
     \time 4/4
 
 	% TEMA PRIMO GIRO
-	r1 r1 r1 r1 r1 r1 r1 r1 r1 r1 r1 r1
+	r1 ^\markup { \tiny {french horn} }r1 r1 r1 r1 r1 r1 r1 r1 r1 r1 r1
 
     a2 		g4. f8
 	g1
@@ -602,7 +602,7 @@ synthCorale = \relative c'' {
 	% FINALE
 	r1 r1 r1 r1
 
-	r1 r1 r1
+	r1 r1 r1 ^\markup { \tiny {trombone + portamento} }
 	g'4 a4 b4 a8 g8
 
 	a8 fis 		d a'~		a fis 		d c~
@@ -621,13 +621,13 @@ synthCorale = \relative c'' {
 	cis e		g b~		b a			g a~
 }
 
-hammondCorale = \relative c' {
-    \clef bass
+hammondCorale = \relative c'' {
+    \clef violin
     \key c \major
     \time 4/4
 
     % TEMA PRIMO GIRO
-	<g b d>1
+	<g b d>1 ^\markup { \tiny {full organ (86.8868.536)} }
 	<fis a d>1
 	<e g b>1~
 	<e g b>1
@@ -730,6 +730,7 @@ pianoCorale = \relative c' {
 	d4 a8 d		a fis a d
 	<c f>4 g8 c	<c e>4. d8
 	c2			r2
+	r1 r1
 }
 
 

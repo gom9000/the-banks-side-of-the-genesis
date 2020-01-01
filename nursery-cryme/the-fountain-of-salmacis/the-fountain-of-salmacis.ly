@@ -380,7 +380,7 @@ hammondUpper = {
 	\time 4/4
 
 	% --- INTRO
-	\mark \markup { \tiny { "               376868600" } }
+	\mark \markup { \tiny { "               58.6868.844" } }
 	\repeat volta 2 {
 	    \hammondUpperIntroA
 	}
@@ -402,7 +402,7 @@ hammondUpper = {
 	r1. r1. r1.
 	\break
 
-	\mark \markup { \tiny { "6768686555" } }
+	\mark \markup { \tiny { "                                          full organ (86.8868.536)" } }
 	% --- TEMA TRE
 	\hammondUpperTemaTreA
 	\break
@@ -422,7 +422,7 @@ hammondUpper = {
 	% --- RIPRESA
 	\key e \minor
 	\time 4/4
-	\mark \markup { \tiny { "376868600" } }
+	\mark \markup { \tiny { "                                      58.6868.844" } }
 	\hammondUpperRipresa
 	\break
 	r1 r1 r1 r1 r1 r1 r1 r1 r1 r1 r1 r1 r1 r1 r1
@@ -440,6 +440,7 @@ hammondLower = {
 	\time 4/4
 
 	% --- INTRO
+	\mark \markup { \tiny { "      org.5" } }
 	\repeat volta 2 {
 	    r1 r1 r1 r1
 	}
@@ -488,6 +489,7 @@ pianet = {
 	\time 4/4
 
 	% --- INTRO
+	\mark \markup { \tiny { "               fuzz pianet" } }
 	\repeat volta 2 {
 	    r1 r1 r1 r1
 	}
@@ -517,6 +519,7 @@ mellotron = {
 	\time 4/4
 
 	% --- INTRO
+	\mark \markup { \tiny { "       violins" } }
 	\repeat volta 2 {
 	    \mellotronIntroA
 	}
