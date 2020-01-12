@@ -392,10 +392,10 @@ hammondBridgeRight = \relative c'' {
     <des f aes>1~
 	<des f aes>1
 
-	<c ees aes>1~
-	<bes ees g>1~
-	<ces ees aes>1~
-	<bes ees g>1~
+	<c f aes>1
+	<bes ees g>1
+	<ces ees aes>1
+	<bes ees g>1
 }
 mellotronBridge = \relative c'' {
     aes4 g aes f
@@ -451,8 +451,8 @@ hammondFinaleBbisRight = \relative c'' {
 	<f a c>2  			<cis f gis>4 <ees g bes>4
 	<f a c>1~
 	<f a c>2  			<cis f gis>4 <ees g bes>4
-	<f a c>4			r4 r4	<f a c f>4~
-	<f a c f>1\fermata
+	<f a c>4			r4 r4	<f a c>4~
+	<f a c>1\fermata
 }
 mellotronFinaleA = \relative c'' {
     gis1
