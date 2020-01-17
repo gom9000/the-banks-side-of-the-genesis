@@ -523,7 +523,7 @@ hammondRight = {
     \clef violin
 	\time 4/4
 	\key g \minor
-	r1 ^\markup { \tiny {866866602 (perc. 3rd soft)} }
+	r1 ^\markup { \tiny {full-organ (868868446) + 2nd soft} }
 
     % --- INTRO ---
 	\repeat volta 2 {
