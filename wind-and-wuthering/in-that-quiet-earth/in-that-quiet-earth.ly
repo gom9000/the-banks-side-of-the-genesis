@@ -1,5 +1,5 @@
 % ===========================================================================================================
-% unquiet-slumbers-for-the-sleepers.ly
+% in-that-quiet-earth.ly
 %  _____ _        ___            _       ___ _    _      ___   __ _____ _         ___                 _    
 % |_   _| |_  ___| _ ) __ _ _ _ | |__ __/ __(_)__| |___ / _ \ / _|_   _| |_  ___ / __|___ _ _  ___ __(_)___
 %   | | | ' \/ -_) _ \/ _` | ' \| / /(_-<__ \ / _` / -_) (_) |  _| | | | ' \/ -_) (_ / -_) ' \/ -_|_-< (_-<
@@ -172,35 +172,16 @@ restTemaTwo = \relative c'' {
 prosoloistTemaThree = \relative c'' {
     a1~
 	a1~
-	a1
-	
-	b1~
-	b1~
-	b2 b2
-	c2 d2
-	a1
-	b1~
-    b2 b2
-	
-	a2 g2
-	e2 b'2
 	a1~
-	a1
-
-	a1
+	
+	a2.		b4~
 	b1~
-	b2 b2
-	c2 d2
+	b2.				b4~
+	b4 c	d2
 	a1
 	b1
-
-	\time 5/4
-	b2 a4 c4 b4
-    \time 4/4
-	d1~ d1~ d1
-	g1~ g1~ g1~ g1
-
-	\bar "|."
+	
+	
 }
 restTemaThree = \relative c'' {
 
@@ -216,7 +197,7 @@ restTemaThree = \relative c'' {
 % ===========================================================================================================
 prosoloistPart = {
     \clef violin
-	\time 4/4
+	\time 3/4
 
 	r1 ^\markup { \tiny {flute vibrato} }
 	r1
@@ -225,6 +206,7 @@ prosoloistPart = {
 	r1
 	\break
 
+
 	\prosoloistTemaOne
 	\break
 
@@ -232,33 +214,17 @@ prosoloistPart = {
 	\break
 
 	\prosoloistTemaTwo
-	\break
 
 	\prosoloistTemaThree
+
 }
 
-mellotronPart = {
+hammondPart = {
     \clef violin
-	\time 4/4
-
-	r1 ^\markup { \tiny {choirs} }
-	r1
-	r1
-	r1
-	r1
-
-	\mellotronTemaOne
-	\restBridgeOne
-	\mellotronTemaTwo
-}
-
-
-pianoPart = {
-    \clef violin
-	\time 4/4
+	\time 3/4
 
     % INTRO
-	r1
+	r1 ^\markup { \tiny {full organ (868868446) + 2nd soft} }
 	r1
 	r1
 	r1
@@ -273,7 +239,7 @@ pianoPart = {
 \book {
 
     \header {
-        title       = \markup {\larger "UNQUIET SLUMBERS FOR THE SLEEPERS..."}
+        title       = \markup {\larger "... IN THAT QUIET EARTH"}
         subtitle    = ""
         subsubtitle = "from the album Wind & Wuthering (1976)"
         instrument  = "keyboards"
@@ -292,15 +258,10 @@ pianoPart = {
             \set Staff.instrumentName = \markup { "Prosoloist" }
             \prosoloistPart
         >>
-        \new Staff = "Mellotron" \with { midiInstrument = #"choir aahs" fontSize = #-4 \override StaffSymbol #'staff-space = #(magstep -4) }
+        \new Staff = "Hammond" \with { midiInstrument = #"reed organ" }
         <<
-            \set Staff.instrumentName = \markup { "Mellotron" }
-            \mellotronPart
-        >>
-        \new Staff = "Piano" \with { midiInstrument = #"electric piano 1" }
-        <<
-            \set Staff.instrumentName = \markup { "Piano" }
-            \pianoPart
+            \set Staff.instrumentName = \markup { "Hammond" }
+            \hammondPart
         >>
     >>
     \layout { \context { \override VerticalAlignment #'forced-distance = #8 } }
