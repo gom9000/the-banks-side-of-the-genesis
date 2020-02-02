@@ -38,158 +38,312 @@
 
 
 % -----------------------------------------------------------------------------------------------------------
+% --  INTRO  ------------------------------------------------------------------------------------------------
+% -----------------------------------------------------------------------------------------------------------
+prosoloistIntro = \relative c'' {
+    e2.~ e2.~ e2.~ e2.~ e2.~ e2.~ e2.~ e2.
+}
+hammondIntro = \relative c'' {
+    <g b d e>2.~
+	<g b d e>2.~
+	<g b d e>2.~
+	<g b d e>2.~
+	<g b d e>2.~
+	<g b d e>2.~
+	<g b d e>2.~
+	<g b d e>2.~
+}
+restIntro = \relative c'' {
+    r2. r2. r2. r2. r2. r2. r2. r2.
+}
+% -----------------------------------------------------------------------------------------------------------
 % --  TEMA 1  -----------------------------------------------------------------------------------------------
 % -----------------------------------------------------------------------------------------------------------
 prosoloistTemaOne = \relative c'' {
+    e2		fis4
+	a,2.
+	a'2		fis8 e8
+	fis2	d4
 
-    % Bsus4/E
-    r4		b 		cis		d
-	r 		b 		cis		d
-	r 		b 		cis		d
-	e2    			d4		cis
-	b1
+	e2		fis4
+	a,2.
+	a'2		fis8 e8
+	fis2	r4
 
-    r4		b 		cis		d
-	r 		b 		cis		d
-	r 		b 		cis		d
-	e2    			d4		cis
-	b1~
-	\break
+	cis2	b4
+	fis'2.
+	r4		b8 fis8 cis8 gis8
 
-	% Bsus4/A
-	b1
-	r1
-
-	r4		b 		cis		d
-	r 		b 		cis		d
-	r 		b 		cis		d
-	e2    			d4		cis
-	b1~
-	b1
+	a2		f4
+	b2.
+	c2		a4
+	d2		c4
 }
-mellotronTemaOne = \relative c' {
+hammondTemaOne = \relative c'' {
+    <g b d e>2.~
+	<g b d e>2.~
+	<fis a d>2.~
+	<fis a d>2.~
 
-    % Bsus4/E
-    r4		fis		gis		a
-	r		fis		gis		a
-	r		fis		gis		a
-	b2				a4		gis
-	fis1
+    <g b d e>2.~
+	<g b d e>2.~
+	<fis a d>2.~
+	<fis a d>2.~
 
-    r4		fis		gis		a
-	r		fis		gis		a
-	r		fis		gis		a
-	b2				a4		gis
-	fis1
+	<fis b d>2.~
+	<fis b d>2.~
+	<fis b d>2.
 
-	% Bsus4/A
-	r1
-	r1
-
-    r4		e		fis		gis
-	r		e		fis		gis
-	r		e		fis		gis
-	a1
-	e1~
-	e1
+	<f a c>2.~
+	<f a c>2.~
+	<f a c>2.~
+	<f a c>2.
 }
 restTemaOne = \relative c'' {
-
-    % Bsus4/E
-    r1 r1 r1 r1 r1
-
-    % Bsus4/A
-    r1 r1 r1 r1 r1 r1
+    r2. r2. r2. r2. r2. r2. r2. r2. r2. r2. r2. r2. r2. r2. r2.
 }
 % -----------------------------------------------------------------------------------------------------------
 % --  BRIDGE 1  ---------------------------------------------------------------------------------------------
 % -----------------------------------------------------------------------------------------------------------
 prosoloistBridgeOne = \relative c'' {
-    r2.			d4~
-	\time 2/4
-	d2~
-	d2~
-	d2~
-	\time 4/4
-	d1~
-	d2			fis2~
-	fis1~
-	fis2		r2
+    e2.~
+}
+hammondBridgeOne = \relative c'' {
+    <g b d e>2.~
 }
 restBridgeOne = \relative c'' {
-    r1
-	\time 2/4
-	r2
-	r2
-	r2
+    r2.
+}
+% -----------------------------------------------------------------------------------------------------------
+% --  BRIDGE 2  ---------------------------------------------------------------------------------------------
+% -----------------------------------------------------------------------------------------------------------
+prosoloistBridgeTwo = \relative c'' {
+    e2		fis4
+	a,2.
+	r2. r2. r2. r2. r2. r2.
+
 	\time 4/4
-	r1
-	r1
-	r1
-	r1
-}
-% -----------------------------------------------------------------------------------------------------------
-% --  TEMA 2  -----------------------------------------------------------------------------------------------
-% -----------------------------------------------------------------------------------------------------------
-prosoloistTemaTwo = \relative c'' {
-    r4		e		fis		g
-	r		e		fis		g
-	r		e		fis		g
-	a2				g4		fis
-	e1
-
-    r4		e,		fis		g
-	r		e		fis		g
-	r		e		fis		g
-	a2				g4		fis
-	f2				g4		a
-	bes2			a
-	a1~
-}
-mellotronTemaTwo = \relative c' {
-    r4		e		fis		g
-	r		e		fis		g
-	r		e		fis		g
-	a2				g4		fis
-	e1
-
-    r4		e		fis		g
-	r		e		fis		g
-	r		e		fis		g
-	a2				g4		fis
-	f2				g4		a
-	<f bes>2		<f a>2
-	<d a>1
-}
-restTemaTwo = \relative c'' {
-    r1 r1 r1 r1 r1
-
-    r1 r1 r1 r1 r1
-}
-% -----------------------------------------------------------------------------------------------------------
-% --  TEMA 3  -----------------------------------------------------------------------------------------------
-% -----------------------------------------------------------------------------------------------------------
-prosoloistTemaThree = \relative c'' {
-    a1~
-	a1~
-	a1~
+	b8 ^\markup { \tiny {sax} } a b dis		d b c a
+	b8 a b dis		d b c a
 	
-	a2.		b4~
-	b1~
-	b2.				b4~
-	b4 c	d2
-	a1
+}
+hammondBridgeTwo = \relative c'' {
+    <g b d e>2.~
+	<g b d e>2.~
+	<g b d e>2.~
+	<g b d e>2.~
+	<g b d e>2.~
+	<g b d e>2.~
+	<g c e>2.
+	<fis a d>2.
+
+	\time 4/4
+    <d g b>1~
+	<d g b>1
+}
+restBridgeTwo = \relative c'' {
+    r2. r2. r2. r2. r2. r2. r2. r2.
+	\time 4/4 r1 r1
+}
+% -----------------------------------------------------------------------------------------------------------
+% --  TEMA 2A  ----------------------------------------------------------------------------------------------
+% -----------------------------------------------------------------------------------------------------------
+prosoloistTemaTwoA = \relative c'' {
+    b1~ ^\markup { \tiny {sax + sax} }
+	b4. fis4 g8 ais b
+	cis d fis g cis4. g8
+	\times 2/3 {a4 g8}		\times 2/3 {fis4 e8}	\times 2/3 {fis4.~}		\times 2/3 {fis4 g8}
+	\times 2/3 {a8 fis d}	\times 2/3 {b cis d}	\times 2/3 {cis b a}	\times 2/3 {cis d a}
+	fis4~					\times 2/3 {fis4 g8}	\times 2/3 {a b, g'}	\times 2/3 {fis b, e}
+	\times 2/3 {fis b, g'}	\times 2/3 {fis b, e}	\times 2/3 {a b, g'}	\times 2/3 {fis b, e}
+	\times 2/3 {fis b, g'}	\times 2/3 {fis b, e}	\times 2/3 {b e fis}	\times 2/3 {a b d}
+	b8 a b dis		d b c a
+	b8 a b dis		d b c a
+	b4 r8 b4 r4.
+
+	\time 3/4
+	r4 c2
+	\time 4/4
+	e4. d16 c16		b4. c16 d16
+	e4. d16 c16		b4. c16 d16
+	e8 d e f4 gis f8~
+	f8 d4 b4 gis4 f8~
+	f8 d4 b4 r4.
+	\times 2/3 {f4 e8}		\times 2/3 {d4 e8}		f4						a
+	\times 2/3 {gis8 a b}	\times 2/3 {d e f}		\times 2/3 {gis a b}	\times 2/3 {d e f}
+}
+restTemaTwoA = \relative c'' {
+    r1 r1 r1 r1 r1 r1 r1 r1 r1 r1 r1
+	\time 3/4 r2. \time 4/4 r1 r1 r1 r1 r1 r1 r1
+}
+% -----------------------------------------------------------------------------------------------------------
+% --  TEMA 2B  ----------------------------------------------------------------------------------------------
+% -----------------------------------------------------------------------------------------------------------
+prosoloistTemaTwoB = \relative c'' {
+    a'8 r8 d4 cis4. c8~
+	c8 b4 g8~ g2
+
+	r4 d'4 cis4. e8~
+	e8 d8~ d2.
+
+	r4 fis4 e4. g8
+	fis8 g8 a4 d,2
+
+	r4 fis4 e4. e8~
+	e8 d8~ d2.
+
+	b,8 a b dis		d b c a
+	b8 a b dis		d b c a
+}
+hammondTemaTwoB = \relative c' {
+    r4 <d fis a>4 <cis e a>4. <c e g>8~
+	<c e g>4. <b d g>8~ <b d g>2
+
+	r4 <d fis a>4 <cis e a>4. <c e g>8~
+	<c e g>8 <b d g>8~ <b d g>2.
+
+	r4 <d fis a>4 <cis e a>4. <c e g>8~
+	<c e g>4 <b d g>2.
+
+	r4 <d fis a>4 <cis e a>4. <c e g>8~
+	<c e g>8 <b d g>8~ <b d g>2.
+
+	<d g b>1~
+	<d g b>1
+}
+% -----------------------------------------------------------------------------------------------------------
+% --  TEMA 2C  ----------------------------------------------------------------------------------------------
+% -----------------------------------------------------------------------------------------------------------
+prosoloistTemaTwoC = \relative c {
+    \times 2/3 {e4  fis8}		\times 2/3 {g4  fis8}		\times 2/3 {g4  fis8}		\times 2/3 {g4  fis8}
+	\times 2/3 {e4  fis8}		\times 2/3 {e4  fis8}		\times 2/3 {a4  fis8}		\times 2/3 {a4  fis8}
+
+    \times 2/3 {e4  fis8}		\times 2/3 {g4  fis8}		\times 2/3 {g4  fis8}		\times 2/3 {g4  fis8}
+	\times 2/3 {e4  fis8}		\times 2/3 {e4  fis8}		\times 2/3 {a4  fis8}		\times 2/3 {a4  fis8}
+
+	\times 2/3 {e4  fis8}		\times 2/3 {g4  fis8}		\times 2/3 {a4  fis8}		\times 2/3 {d'4  r8}
 	b1
-	
-	
+	\times 2/3 {e,4  fis8}		\times 2/3 {g4  fis8}		\times 2/3 {a4  fis8}		\times 2/3 {d'4  r8}
+	b1
 }
-restTemaThree = \relative c'' {
+restTemaTwoC = \relative c' {
+    r1 r1 r1 r1 r1 r1 r1 r1
+}
+% -----------------------------------------------------------------------------------------------------------
+% --  TEMA 2D  ----------------------------------------------------------------------------------------------
+% -----------------------------------------------------------------------------------------------------------
+prosoloistTemaTwoD = \relative c'' {
+    b8 a g ees 		d b c ees
+	d c d a'		g d ees c
+	b4 r8			b'4. r4
+}
+restTemaTwoD = \relative c' {
+    r1 r1 r1
+}
+% -----------------------------------------------------------------------------------------------------------
+% --  TEMA 2E  ----------------------------------------------------------------------------------------------
+% -----------------------------------------------------------------------------------------------------------
+prosoloistTemaTwoE = \relative c''' {
+    \time 2/4
+	c16 ^\markup { \tiny {sax} } a f d					\times 2/3 {c8 d a}
+	\time 4/4
+	\times 2/3 {g a f}			\times 2/3 {e f d}		b16 c e f					e f gis b
+	b, c e f					e f gis b				b, c e f					e f gis b
+	b c e f						gis8 a~					a2
 
+	\times 2/3 {c8 b c}		\times 2/3 {gis a b}		\times 2/3 {gis g gis}		\times 2/3 {f g gis}
+	\times 2/3 {f e f}		\times 2/3 {d e f}			\times 2/3 {d c d}			\times 2/3 {b c d}
+	\times 2/3 {b a b}		\times 2/3 {gis a b}		\times 2/3 {gis g gis}		\times 2/3 {f g gis}
+	\times 2/3 {d e f}		\times 2/3 {g gis a}		\times 2/3 {b c d}			\times 2/3 {e f gis}
+}
+restTemaTwoE = \relative c' {
+    \time 2/4 r2
+	\time 4/4 r1 r1 r1 r1 r1 r1 r1
+}
+% -----------------------------------------------------------------------------------------------------------
+% --  TEMA 2F  ----------------------------------------------------------------------------------------------
+% -----------------------------------------------------------------------------------------------------------
+prosoloistTemaTwoF = \relative c'' {
+    a'8 r8 ^\markup { \tiny {sax + sax} } d4 cis4. c8~
+	c8 b4 g8~ g2
+
+	r4 d'4 cis4. e8~
+	e8 d8~ d2.
+
+	r4 fis4 e4. g8
+	fis8 g8 a4 d,2
+
+	r4 fis4 e4. e8~
+	e8 d4 b8 d4 cis4
+
+	\time 5/4
+	a8 e'4 dis4.~dis2
+}
+hammondTemaTwoF = \relative c' {
+    r4 <d fis a>4 <cis e a>4. <c e g>8~
+	<c e g>4. <b d g>8~ <b d g>2
+
+	r4 <d fis a>4 <cis e a>4. <c e g>8~
+	<c e g>8 <b d g>8~ <b d g>2.
+
+	r4 <d fis a>4 <cis e a>4. <c e g>8~
+	<c e g>4 <b d g>2.
+
+	r4 <d fis a>4 <cis e a>4. <c e g>8~
+	<c e g>8 <b d g>4. <d fis a>4	<cis e a>4~
+
+	\time 5/4
+	<cis e a>8 <e gis b>4 <dis fis b>4.~ <dis fis b>2~
 }
 % -----------------------------------------------------------------------------------------------------------
 % --  FINALE  -----------------------------------------------------------------------------------------------
 % -----------------------------------------------------------------------------------------------------------
+prosoloistFinale = \relative c'' {
+    \time 4/4
+    dis8 ^\markup { \tiny {sax + sax + fuzz-guitar1} } cis dis g		fis dis e cis
+	\time 3/4
+	dis8.  dis8.  dis4.
 
+	\time 4/4
+    c8 bes c e		dis c cis bes
+	\time 3/4
+	c8.   c8.   c4.
+
+	\time 4/4
+    a8 g a cis		c a bes g
+	\time 3/4
+	a8.  a8.  a4.~
+
+	\time 4/4
+	a1~
+	a1~
+	a1
+	r1
+	r1
+}
+hammondFinale = \relative c' {
+    \time 4/4
+    <dis fis b>1
+	\time 3/4
+	<dis gis c>8. <dis gis c>8. <dis gis c>4.~
+
+    \time 4/4
+    <dis gis c>1
+	\time 3/4
+	<c f a>8. <c f a>8. <c f a>4.~
+
+    \time 4/4
+    <c f a>1
+	\time 3/4
+	<a d fis a>8. <a d fis a>8. <a d fis a>4.~
+
+	\time 4/4
+	<a d fis a>1~
+	<a d fis a>1~
+	<a d fis a>1~
+	<a d fis a>1~
+	<a d fis a>1~
+}
 
 
 % ===========================================================================================================
@@ -199,24 +353,48 @@ prosoloistPart = {
     \clef violin
 	\time 3/4
 
-	r1 ^\markup { \tiny {flute vibrato} }
-	r1
-	r1
-	r1
-	r1
+	r2. ^\markup { \tiny {flute vibrato} }
+
+
+	\prosoloistIntro
 	\break
 
+	\restTemaOne
+	\break
+	\restTemaOne
+	\break
+
+	\mark \markup {"            12x"} \repeat volta 12 {
+	    \restBridgeOne
+	}
+	\mark \markup {"             8x"} \repeat volta 8 {
+	    \prosoloistBridgeOne
+	}
+	\break
 
 	\prosoloistTemaOne
 	\break
-
-	\prosoloistBridgeOne
+	\prosoloistTemaOne
 	\break
 
-	\prosoloistTemaTwo
+	\prosoloistBridgeTwo
+	\pageBreak
 
-	\prosoloistTemaThree
+	\prosoloistTemaTwoA
+	\break
+    \prosoloistTemaTwoB
+	\break
+	\prosoloistTemaTwoC
+	\break
+	\prosoloistTemaTwoD
+	\pageBreak
 
+	\prosoloistTemaTwoE
+	\break
+	\prosoloistTemaTwoF
+	\break
+	\prosoloistFinale
+	\bar "|."
 }
 
 hammondPart = {
@@ -224,12 +402,34 @@ hammondPart = {
 	\time 3/4
 
     % INTRO
-	r1 ^\markup { \tiny {full organ (868868446) + 2nd soft} }
-	r1
-	r1
-	r1
-	r1
+	r2. ^\markup { \tiny {full organ (868868446) + 2nd soft} }
 
+
+	\hammondIntro
+
+	\hammondTemaOne
+	\hammondTemaOne
+
+	\repeat volta 12 {
+	    \hammondBridgeOne
+	}
+	\repeat volta 8 {
+	    \hammondBridgeOne
+	}
+
+	\hammondTemaOne
+	\hammondTemaOne
+
+	\hammondBridgeTwo
+
+	\restTemaTwoA
+	\hammondTemaTwoB
+	\restTemaTwoC
+	\restTemaTwoD
+
+	\restTemaTwoE
+	\hammondTemaTwoF
+	\hammondFinale
 }
 
 
@@ -246,26 +446,26 @@ hammondPart = {
         composer    = "music by Genesis"
         arranger    = "(transcribed by gos95 for study purposes)"
         enteredby   = "gos95"
-        piece       = \markup { \bold "                             " \smaller { (\note #"4"#1 = 108) } }
+        piece       = \markup { \bold "                             " \smaller { (\note #"4"#1 = 112) } }
 %		copyright   = "Copyright (c) 2019 Alessandro Fraschetti (mail: gos95@gommagomma.net)"
         tagline     = ""
     }
 
     \score {
     <<
-        \new Staff = "Prosoloist" \with { midiInstrument = #"flute" }
+        \new Staff = "Prosoloist" \with { midiInstrument = #"brass section" }
         <<
             \set Staff.instrumentName = \markup { "Prosoloist" }
             \prosoloistPart
         >>
-        \new Staff = "Hammond" \with { midiInstrument = #"reed organ" }
+        \new Staff = "Hammond" \with { midiInstrument = #"rock organ" }
         <<
             \set Staff.instrumentName = \markup { "Hammond" }
             \hammondPart
         >>
     >>
     \layout { \context { \override VerticalAlignment #'forced-distance = #8 } }
-    \midi { \context { \Score tempoWholesPerMinute = #(ly:make-moment 108 4) } }
+    \midi { \context { \Score tempoWholesPerMinute = #(ly:make-moment 112 4) } }
     }
 }
 % ===========================================================================================================
