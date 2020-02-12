@@ -106,8 +106,13 @@ pianoBridgeTwo = \relative c''' {
 	\time 3/4 c4 g8 e4	g8			\time 4/4 c4 g8 e4	g8 c4
 	\time 3/4 b4 fis8 e4 fis8		\time 4/4 b4 fis8 gis4 fis8 e8 fis8
 
-	\time 3/4 gis8 a b cis b4 		\time 4/4 e,8 fis gis a gis2
+	          gis8 a b cis b2 		\time 3/4 e,8 fis gis a gis4
 
+              cis4 gis8 e4 gis8		\time 4/4 cis4 gis8 e4 gis8 cis4
+	\time 3/4 c4 g8 e4	g8			\time 4/4 c4 g8 e4	g8 c4
+	\time 3/4 b4 fis8 e4 fis8		\time 4/4 b4 fis8 e4 fis8 b4
+}
+pianoBridgeTwoTwo = \relative c''' {
     \time 3/4 cis4 gis8 e4 gis8		\time 4/4 cis4 gis8 e4 gis8 cis4
 	\time 3/4 c4 g8 e4	g8			\time 4/4 c4 g8 e4	g8 c4
 	\time 3/4 b4 fis8 e4 fis8		\time 4/4 b4 fis8 e4 fis8 b4
@@ -117,9 +122,14 @@ restBridgeTwo = \relative c'' {
 	\time 3/4 r2.	\time 4/4 r1
 	\time 3/4 r2.	\time 4/4 r1
 
-	\time 3/4 r2.	\time 4/4 r1
+	          r1	\time 3/4 r2.
 
+	          r2.	\time 4/4 r1
 	\time 3/4 r2.	\time 4/4 r1
+	\time 3/4 r2.	\time 4/4 r1
+}
+restBridgeTwoTwo = \relative c'' {
+    \time 3/4 r2.	\time 4/4 r1
 	\time 3/4 r2.	\time 4/4 r1
 	\time 3/4 r2.	\time 4/4 r1
 }
@@ -186,7 +196,7 @@ prosoloistFinale = \relative c''' {
 	b,2. fis'8 d
 	b4. a8  b2~
 	b8 g fis g fis2
-    e1	
+    e4. d8 e2	
 }
 pianoFinale = \relative c'' {
 	r1
@@ -242,7 +252,7 @@ prosoloistPart = {
 	\break
 	\restTemaOne
 	\break
-	\restBridgeTwo
+	\restBridgeTwoTwo
 	\break
 	\restTemaTwo
 	\break
@@ -270,7 +280,7 @@ pianoPart = {
 	\restTemaOne
 	\restBridgeOne
 	\restTemaOne
-	\pianoBridgeTwo
+	\pianoBridgeTwoTwo
 	\pianoTemaTwo
 	\pianoTemaTwo
 
@@ -294,7 +304,7 @@ mellotronPart = {
 	\restTemaOne
 	\mellotronBridgeOne
 	\mellotronTemaOne
-	\restBridgeTwo
+	\restBridgeTwoTwo
 	\mellotronTemaTwo
 	\mellotronTemaTwo
 
