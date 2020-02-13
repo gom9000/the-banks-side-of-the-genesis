@@ -29,7 +29,7 @@
 
 \version "2.12.3"
 #(ly:set-option 'delete-intermediate-files #t)
-#(set-global-staff-size 18)
+#(set-global-staff-size 17)
 
 
 % ===========================================================================================================
@@ -70,6 +70,12 @@ restTemaOne = \relative c'' {
 	r2 r2 r2 r2 r2
 	r2 r2 r2
 }
+restOneBarTemaOne = \relative c'' {
+    \compressFullBarRests
+    R2*15
+	\expandFullBarRests
+	
+}
 % -----------------------------------------------------------------------------------------------------------
 % --  BRIDGE 1  ---------------------------------------------------------------------------------------------
 % -----------------------------------------------------------------------------------------------------------
@@ -101,42 +107,40 @@ restBridgeOne = \relative c'' {
 % -----------------------------------------------------------------------------------------------------------
 % --  BRIDGE 2  ---------------------------------------------------------------------------------------------
 % -----------------------------------------------------------------------------------------------------------
-pianoBridgeTwo = \relative c''' {
-    \time 3/4 cis4 gis8 e4 gis8		\time 4/4 cis4 gis8 e4 gis8 cis4
-	\time 3/4 c4 g8 e4	g8			\time 4/4 c4 g8 e4	g8 c4
-	\time 3/4 b4 fis8 e4 fis8		\time 4/4 b4 fis8 gis4 fis8 e8 fis8
+hammondBridgeTwo = \relative c''' {
+	cis4 gis8 e4 gis8		cis4 gis8 e4 gis8 cis4
+	c4   g8   e4 g8			c4 g8 e4	g8 c4
+	b4   fis8 e4 fis8	    b4 fis8 gis4 fis8 e8 fis8
 
-	          gis8 a b cis b2 		\time 3/4 e,8 fis gis a gis4
+	gis8 a    b  cis 		b2 e,8 fis gis a gis4
 
-              cis4 gis8 e4 gis8		\time 4/4 cis4 gis8 e4 gis8 cis4
-	\time 3/4 c4 g8 e4	g8			\time 4/4 c4 g8 e4	g8 c4
-	\time 3/4 b4 fis8 e4 fis8		\time 4/4 b4 fis8 e4 fis8 b4
+    cis4 gis8 e4 gis8		cis4 gis8 e4 gis8 cis4
+	c4 g8 e4	g8			c4 g8 e4	g8 c4
+	b4 fis8 e4 fis8			b4 fis8 e4 fis8 b4
 }
-pianoBridgeTwoTwo = \relative c''' {
-    \time 3/4 cis4 gis8 e4 gis8		\time 4/4 cis4 gis8 e4 gis8 cis4
-	\time 3/4 c4 g8 e4	g8			\time 4/4 c4 g8 e4	g8 c4
-	\time 3/4 b4 fis8 e4 fis8		\time 4/4 b4 fis8 e4 fis8 b4
+hammondBridgeTwoTwo = \relative c''' {
+    cis4 gis8 e4 gis8		cis4 gis8 e4 gis8 cis4
+	c4 g8 e4	g8			c4 g8 e4	g8 c4
+	b4 fis8 e4 fis8			b4 fis8 e4 fis8 b4
 }
 restBridgeTwo = \relative c'' {
-    \time 3/4 r2.	\time 4/4 r1
-	\time 3/4 r2.	\time 4/4 r1
-	\time 3/4 r2.	\time 4/4 r1
-
-	          r1	\time 3/4 r2.
-
-	          r2.	\time 4/4 r1
-	\time 3/4 r2.	\time 4/4 r1
-	\time 3/4 r2.	\time 4/4 r1
+    r1..
+	r1..
+	r1..
+	r1..
+	r1..
+	r1..
+	r1..
 }
 restBridgeTwoTwo = \relative c'' {
-    \time 3/4 r2.	\time 4/4 r1
-	\time 3/4 r2.	\time 4/4 r1
-	\time 3/4 r2.	\time 4/4 r1
+    r1..
+	r1..
+	r1..
 }
 % -----------------------------------------------------------------------------------------------------------
 % --  TEMA 2  -----------------------------------------------------------------------------------------------
 % -----------------------------------------------------------------------------------------------------------
-pianoTemaTwo = \relative c'' {
+hammondTemaTwo = \relative c'' {
     r1 r1 r1 r1
 	r1 r1 r1 r1 r1 r1
 }
@@ -198,13 +202,13 @@ prosoloistFinale = \relative c''' {
 	b8 g fis g fis2
     e4. d8 e2	
 }
-pianoFinale = \relative c'' {
+hammondFinale = \relative c'' {
 	r1
 	r1
 	r1
 	r1
 
-	<b' e g b>1\arpeggio
+	r1 %<b' e g b>1\arpeggio
 	r1
 	r1
 	r1
@@ -218,8 +222,9 @@ mellotronFinale = \relative c' {
 	<e a cis>1
 	<e g b d>1
 	<e a cis>1
+	<e g b>1
 
-	r1 r1 r1 r1 r1 r1 r1 r1
+	r1 r1 r1 r1 r1 r1 r1
 }
 
 
@@ -231,14 +236,17 @@ prosoloistPart = {
 	\time 2/4
 
 	r2 ^\markup { \tiny {bassoon} }
+	r2
+	\bar "||"
 
-	\restTemaOne
-	\break
+	\restOneBarTemaOne
 	\prosoloistBridgeOne		%% D  Ab  E  Bb  A  C4+
 	\break
 	\restTemaOne				%% G  G7+  Am7  C  D  E  B  E7+  A7+  A4  D  G7+
 	\break
+	\time 7/4
 	\restBridgeTwo
+	\time 4/4
 	\break
 	\restTemaTwo				%% |: Em  Bm7  A  G7+ :|  F#m7  G7+  F#-7  G#m7  C#m7  E  Em7
 	\break
@@ -246,14 +254,15 @@ prosoloistPart = {
 	\break
 
 	\time 2/4
-	\restTemaOne
-	\break
+	\restOneBarTemaOne
 	\prosoloistBridgeOne
 	\break
 	\restTemaOne
 	\break
+	\time 7/4
 	\restBridgeTwoTwo
 	\break
+	\time 4/4
 	\restTemaTwo
 	\break
 	\restTemaTwo
@@ -263,28 +272,33 @@ prosoloistPart = {
 	\bar "|."
 }
 
-pianoPart = {
+hammondPart = {
     \clef violin
 	\time 2/4
 
-    r2 ^\markup { \tiny {e-piano} }
+    r2 ^\markup { \tiny {00.0000.00 3rd soft} }
+	r2
 
-	\restTemaOne
+	\restOneBarTemaOne
 	\restBridgeOne
 	\restTemaOne
-	\pianoBridgeTwo
-	\pianoTemaTwo
+	\time 7/4
+	\hammondBridgeTwo
+	\time 4/4
+	\hammondTemaTwo
 	\restBridgeThree
 
 	\time 2/4
-	\restTemaOne
+	\restOneBarTemaOne
 	\restBridgeOne
 	\restTemaOne
-	\pianoBridgeTwoTwo
-	\pianoTemaTwo
-	\pianoTemaTwo
+	\time 7/4
+	\hammondBridgeTwoTwo
+	\time 4/4
+	\hammondTemaTwo
+	\hammondTemaTwo
 
-	\pianoFinale
+	\hammondFinale
 }
 
 mellotronPart = {
@@ -292,19 +306,24 @@ mellotronPart = {
 	\time 2/4
 
     r2 ^\markup { \tiny {violins} }
+	r2
 
-	\restTemaOne
+	\restOneBarTemaOne
 	\mellotronBridgeOne
 	\mellotronTemaOne
+	\time 7/4
 	\restBridgeTwo
+	\time 4/4
 	\mellotronTemaTwo
 	\mellotronBridgeThree
 
 	\time 2/4
-	\restTemaOne
+	\restOneBarTemaOne
 	\mellotronBridgeOne
 	\mellotronTemaOne
+	\time 7/4
 	\restBridgeTwoTwo
+	\time 4/4
 	\mellotronTemaTwo
 	\mellotronTemaTwo
 
@@ -337,10 +356,10 @@ mellotronPart = {
             \set Staff.instrumentName = \markup { "Prosoloist" }
             \prosoloistPart
         >>
-        \new Staff = "Piano" \with { midiInstrument = #"electric piano 1" }
+        \new Staff = "Hammond" \with { midiInstrument = #"marimba" }
         <<
-            \set Staff.instrumentName = \markup { "Piano" }
-            \pianoPart
+            \set Staff.instrumentName = \markup { "Hammond" }
+            \hammondPart
         >>
         \new Staff = "Mellotron" \with { midiInstrument = #"violin" }
         <<
