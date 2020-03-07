@@ -276,7 +276,7 @@ hammondPart = {
     \clef violin
 	\time 2/4
 
-    r2 ^\markup { \tiny {00.0000.00 3rd soft} }
+    r2 ^\markup { \tiny {00.3845.005 2nd fast} }
 	r2
 
 	\restOneBarTemaOne
