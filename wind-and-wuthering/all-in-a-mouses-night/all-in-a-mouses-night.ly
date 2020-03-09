@@ -259,32 +259,32 @@ restTemaTwoA = \relative c'' {
 
 
 prosoloistTemaTwoB = \relative c'' {
-    c8[ d]  c[ e] c[ d]
-	c8[ d]  c[ e] c[ d]
-	c8[ d]  c[ e] c[ d]
-	c8[ d]  c[ e] c[ d]
+    c8[ d]  c[ c] e[ c]
+	c8[ d]  c[ c] e[ c]
+	c8[ d]  c[ c] e[ c]
+	c8[ d]  c[ c] e[ c]
 
-	c8[ d]  c[ ees] c[ d]
-	c8[ d]  c[ ees] c[ d]
-	c8[ d]  c[ ees] c[ d]
-	c8[ d]  c[ ees] c[ d]
+	c8[ d]  c[ c] ees[ d]
+	c8[ d]  c[ c] ees[ d]
+	c8[ d]  c[ c] ees[ d]
+	c8[ d]  c[ c] ees[ d]
 
-	b8[ c]  b[ d] b[ c]
+	b8[ c]  b[ b] d[ b]
 	b8[ c]  b[ c] b[ a]
 
-	g8[ a]  g[ b] g[ a]
-	g8[ a]  g[ b] g[ a]
+	g8[ a]  g[ g] b[ g]
+	g8[ a]  g[ g] b[ g]
 
-	g8[ a]  g[ bes] g[ a]
-	g8[ a]  g[ bes] g[ a]
-	g8[ a]  g[ bes] g[ a]
-	g8[ a]  g[ bes] g[ a]
+	g8[ a]  g[ g] bes[ g]
+	g8[ a]  g[ g] bes[ g]
+	g8[ a]  g[ g] bes[ g]
+	g8[ a]  g[ g] bes[ g]
 
-	fis8[ g]  fis[ a] fis[ g]
-	fis8[ g]  fis[ a] fis[ g]
+	fis8[ g]  fis[ fis] a[ fis]
+	fis8[ g]  fis[ fis] a[ fis]
 
-	fis8[ g]  fis[ g] fis[ g]
-	fis8[ a]  
+	fis8[ a]  fis[ a] fis[ a]
+	fis8[ b]  
 			^\markup { \tiny {    D.S.} }
 			r2
 }
