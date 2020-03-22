@@ -62,14 +62,14 @@ prosoloistIntro = \relative c'' {
 }
 hammondIntro = \relative c' {
     \repeat volta 2 {
-        <ees f bes d>1~ \mf
+        <ees f bes d>1~ \mp
 	    <ees f bes d>1~
 	    <ees g bes d>1~
 	} \alternative {
 	    {<d f bes d>1}
 	    {<d f bes d>1}
 	}
-	<e g c e>1
+	<e g c e>1 \>
 	<ees f bes d>1~ \p \<
 	\repeat volta 6 {
 	    <ees f bes d>1~
@@ -90,12 +90,12 @@ stringsIntro = \relative c' {
 	r1
 	r1
 	\repeat volta 6 {
-	    <ees f bes d>1~
+	    <ees f bes d>1~ \<
     }
 	\repeat volta 6 {
-	    <d fis b d>1
+	    <d fis b d>1 \f \>
     }
-	r1
+	r1 \!
 	r1
 }
 % -----------------------------------------------------------------------------------------------------------
@@ -265,7 +265,7 @@ prosoloistTemaThreeB = \relative c'' {
 	a8 b a g4 e4 r8
 	a8 b a g4 e4 r8
     a8 b a g4 e4 r8
-	a8 b a g4 e4 r8 \ppp
+	a8 b a g4 e4 r8 \!
 }
 stringsTemaThreeB = \relative c'' {
     <c e a>1
@@ -274,8 +274,8 @@ stringsTemaThreeB = \relative c'' {
 	<c f aes>1
 
 	<b e g>1~ \>
-	<b e g>1 \ppp
-	r1 r1 r1 r1 r1 r1
+	<b e g>1
+	r1 \! r1 r1 r1 r1 r1
 }
 restTemaThreeB = \relative c'' {
 	r1 r1 r1 r1
@@ -292,8 +292,8 @@ stringsBridgeB = \relative c' {
 	    \expandFullBarRests
 	}
 	\repeat volta 2 {
-	    <e g b d>1~
-		<e g b d>1~
+	    <e g b d>1~ \<
+		<e g b d>1~ \p
 		<e g b d>1~
 		<e g b d>1~
 
@@ -318,17 +318,17 @@ stringsBridgeB = \relative c' {
 	\expandFullBarRests
     
 	r1 \time 2/4 r2 \time 4/4 r1
-	<cis fis a cis>1~
+	<cis fis a cis>1~ ^\markup { \tiny {mellotron choirs} } \<
 	<cis fis a cis>2~ <cis fis a cis e>2
+	<cis fis a cis e>1 \f
 	<cis fis a cis e>1
-	<cis fis a cis e>1
-	<b e gis b>1~
+	<b e gis b>1~ \>
 	<b e gis b>1
 
-	<cis fis a cis>2.~ <cis fis a b cis>4
+	<cis fis a cis>2.~ \! \< <cis fis a b cis>4
 	<cis fis a cis e>2. <cis fis a b cis e>4
-	<b e gis b e>1
-	r1
+	<b e gis b e>1 \f \>
+	r1 \! ^\markup { \tiny {strings-I} }
 }
 restBridgeB = \relative c'' {
     \repeat volta 2 {
@@ -355,13 +355,44 @@ restBridgeB = \relative c'' {
 % --  FINALE  -----------------------------------------------------------------------------------------------
 % -----------------------------------------------------------------------------------------------------------
 hammondFinale = \relative c' {
-    r1\fermata
+    <d fis b>1~ \>
+	\repeat volta 6 {
+	    <d fis b>1 \p \<
+    }
+
+	<ees f bes d>1~ \f \>
+	\repeat volta 6 {
+	    <ees f bes d>1 \p \<
+    }
+	<d fis b d>1 \f \> \fermata
+
+    r1 \!
 }
-stringsFinale = \relative c''' {
-	r1\fermata
+stringsFinale = \relative c' {
+    r1
+	\repeat volta 6 {
+	    <d fis b>1 \<
+    }
+
+	<ees f bes d>1~ \f \>
+	\repeat volta 6 {
+	    <ees f bes d>1 \! \<
+    }
+	<d fis b d>1 \f \> \fermata
+
+    r1 \!
 }
 restFinale = \relative c'' {
-	r1\fermata
+    r1
+	\repeat volta 6 {
+	    r1
+    }
+	r1
+	\repeat volta 6 {
+	    r1
+    }
+	r1 \fermata
+    r1 \!
 }
 % ===========================================================================================================
 % --------------------------------------------  B U I L D  --------------------------------------------------
@@ -409,8 +440,22 @@ prosoloistPart = {
 
 	% -- BRIDGE B
 	\restBridgeB
+	\break
+
+	% -- TEMA 2
+	\restTemaTwoB
+	\break
+
+	% -- TEMA 3
+	\prosoloistTemaThree
+	\break
+
+	% -- TEMA 1
+	\restTemaOne
+	\break
 
 	% -- FINALE
+	\restFinale
 	\bar "|."
 }
 
@@ -448,7 +493,17 @@ hammondPart = {
 	% -- BRIDGE B
 	\restBridgeB
 
+	% -- TEMA 2
+	\hammondTemaTwoB
+
+	% -- TEMA 3
+	\restTemaThree
+
+	% -- TEMA 1
+	\hammondTemaOne
+
 	% -- FINALE
+	\hammondFinale
 }
 
 musicalboxPart = {
@@ -485,7 +540,17 @@ musicalboxPart = {
 	% -- BRIDGE B
 	\stringsBridgeB
 
+	% -- TEMA 2
+	\stringsTemaTwoB
+
+	% -- TEMA 3
+	\stringsTemaThree  %% forse toglie l'organo e raddoppia una ottava sotto, oppure insieme all'organo (più basso) ma una ottava sotto tranne l'ultimo accordo...
+
+	% -- TEMA 1
+	\restTemaOne
+
 	% -- FINALE
+	\stringsFinale
 }
 
 
@@ -502,7 +567,7 @@ musicalboxPart = {
         composer    = "music by Genesis"
         arranger    = "(transcribed by gos95 for study purposes)"
         enteredby   = "gos95"
-        piece       = \markup { \bold "                             " \smaller { (\note #"4"#1 = 108) } }
+        piece       = \markup { \bold "                             " \smaller { (\note #"4"#1 = 120) } }
 %		copyright   = "Copyright (c) 2020 Alessandro Fraschetti (mail: gos95@gommagomma.net)"
         tagline     = ""
     }
@@ -526,7 +591,7 @@ musicalboxPart = {
         >>
     >>
     \layout { \context { \override VerticalAlignment #'forced-distance = #8 } }
-    \midi { \context { \Score tempoWholesPerMinute = #(ly:make-moment 108 4) } }
+    \midi { \context { \Score tempoWholesPerMinute = #(ly:make-moment 120 4) } }
     }
 }
 % ===========================================================================================================
