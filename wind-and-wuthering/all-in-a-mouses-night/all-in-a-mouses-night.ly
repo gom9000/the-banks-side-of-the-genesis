@@ -290,9 +290,9 @@ prosoloistTemaTwoB = \relative c'' {
 }
 hammondTemaTwoB = \relative c' {
     <a c e>2.~			<a c e>2.~			<a c e>2.~			<a c e>2.
-	<aes c ees>2.~		<aes c ees>2.~		<aes c ees>2.~		<aes c ees>2.
+	<f aes c ees>2.~	<f aes c ees>2.~	<f aes c ees>2.~	<f aes c ees>2.
 	<g b d>2.~			<g b d>2.~			<g b e>2.~			<g b e>2.
-	<g bes ees>2.~		<g bes ees>2.~		<g bes ees>2.~		<g bes ees>2.
+	<g bes c ees>2.~	<g bes c ees>2.~	<g bes c ees>2.~	<g bes c ees>2.
 	<fis a d>2.~		<fis a d>2.~		<fis b d>2.~		<fis b d>2.
 }
 restTemaTwoB = \relative c'' {
