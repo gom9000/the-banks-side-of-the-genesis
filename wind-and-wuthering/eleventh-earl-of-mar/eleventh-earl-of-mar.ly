@@ -258,14 +258,14 @@ prosoloistTemaThreeB = \relative c'' {
 	f2. e4
 	f2. g4
 
-	a8 b a g4 e4 r8
-	a8 b a g4 e4 r8
-    a8 b a g4 e4 r8
-	a8 b a g4 e4 r8 \>
-	a8 b a g4 e4 r8
-	a8 b a g4 e4 r8
-    a8 b a g4 e4 r8
-	a8 b a g4 e4 r8 \!
+	a8 b a g4\staccato e4\staccato r8
+	a8 b a g4\staccato e4\staccato r8
+    a8 b a g4\staccato e4\staccato r8
+	a8 b a g4\staccato e4\staccato r8 \>
+	a'8 b a g4\staccato e4\staccato r8
+	a8 b a g4\staccato e4\staccato r8
+    a8 b a g4\staccato e4\staccato r8
+	a8 b a g4\staccato e4\staccato r8 \!
 }
 stringsTemaThreeB = \relative c'' {
     <c e a>1
@@ -284,8 +284,38 @@ restTemaThreeB = \relative c'' {
 % -----------------------------------------------------------------------------------------------------------
 % --  BRIDGE B  ---------------------------------------------------------------------------------------------
 % -----------------------------------------------------------------------------------------------------------
+hammondBridgeB = \relative c'' {
+    \repeat volta 2 {
+        \compressFullBarRests
+        R1*8
+	    \expandFullBarRests
+	}
+	\repeat volta 2 {
+        R1*8
+		\time 7/4 R1..*3
+		\time 4/4 r1
+	} \alternative {
+	    {r1}
+	    {r1}
+	}
+	\compressFullBarRests
+    R1*8
+	\expandFullBarRests
+
+	r1 \time 2/4 r2 \time 4/4 r1
+	<cis fis a cis>1~ ^\markup { \tiny {mellotron choirs} } \<
+	<cis fis a cis>1
+	<cis fis a cis e>1 \f
+	<cis fis a cis e>1
+	<b e gis b>1~ \>
+	<b e gis b>1
+
+	<cis fis a cis>2.~ \! \< <cis fis a b cis>4
+	<cis fis a cis e>2. <cis fis a b cis e>4
+	<b e gis b e>1 \f \>
+	r1 \!
+}
 stringsBridgeB = \relative c' {
-% 44.3845.005
     \repeat volta 2 {
         \compressFullBarRests
         R1*8
@@ -318,16 +348,16 @@ stringsBridgeB = \relative c' {
 	\expandFullBarRests
     
 	r1 \time 2/4 r2 \time 4/4 r1
-	<cis fis a cis>1~ ^\markup { \tiny {mellotron choirs} } \<
-	<cis fis a cis>2~ <cis fis a cis e>2
-	<cis fis a cis e>1 \f
-	<cis fis a cis e>1
-	<b e gis b>1~ \>
-	<b e gis b>1
+	<fis a cis>1~ ^\markup { \tiny {mellotron choirs} } \<
+	<fis a cis>1
+	<fis a cis e>1~ \f
+	<fis a cis e>1
+	<e gis b>1~ \>
+	<e gis b>1
 
-	<cis fis a cis>2.~ \! \< <cis fis a b cis>4
-	<cis fis a cis e>2. <cis fis a b cis e>4
-	<b e gis b e>1 \f \>
+	<fis a cis>2.~ \! \< <fis b cis>4
+	<fis a cis e>2. <fis b cis e>4
+	<e gis b e>1 \f \>
 	r1 \! ^\markup { \tiny {strings-I} }
 }
 restBridgeB = \relative c'' {
@@ -491,7 +521,7 @@ hammondPart = {
 	\restTemaThreeB
 
 	% -- BRIDGE B
-	\restBridgeB
+	\hammondBridgeB
 
 	% -- TEMA 2
 	\hammondTemaTwoB
