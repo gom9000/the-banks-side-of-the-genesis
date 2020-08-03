@@ -487,7 +487,7 @@ prosoloistPart = {
     \clef violin
 	\time 4/4
 
-	r1 ^\markup { \tiny {trumpet} }
+	r1 ^\markup { \tiny {pulsar} }
 	\bar "||"
 
 	% -- INTRO --
@@ -574,7 +574,7 @@ musicalboxPart = {
     \clef violin
 	\time 4/4
 
-    r1 ^\markup { \tiny {strings-I} }
+    r1 ^\markup { \tiny {strings-I (fx)} }
 
 	% -- INTRO --
 	\stringsIntro
