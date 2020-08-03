@@ -168,10 +168,10 @@ restTemaTwo = \relative c'' {
 prosoloistBridgeThree = \relative c'' {
     d2		b2
 	cis2	a2
-	b2		e4 d4
+	b2		e4. d8
 	cis2	a2
-	r1
-	r1
+	b1~
+	b2. r4
 }
 mellotronBridgeThree = \relative c' {
 	<e g b d>1
@@ -190,7 +190,7 @@ restBridgeThree = \relative c'' {
 prosoloistFinale = \relative c''' {
     d2		b2
 	cis2	a2
-	b2		e4 d4
+	b2		e4. d8
 	cis2	a2
 
 	g2~     g8 a b cis
@@ -235,7 +235,7 @@ prosoloistPart = {
     \clef violin
 	\time 2/4
 
-	r2 ^\markup { \tiny {bassoon} }
+	r2 ^\markup { \tiny {english horn} }
 	r2
 	\bar "||"
 
@@ -276,7 +276,7 @@ hammondPart = {
     \clef violin
 	\time 2/4
 
-    r2 ^\markup { \tiny {00.3845.005 2nd fast} }
+    r2 ^\markup { \tiny {00.3845.505 2nd fast} }
 	r2
 
 	\restOneBarTemaOne
