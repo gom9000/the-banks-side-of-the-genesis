@@ -194,7 +194,7 @@ restTemaOneBbis = \relative c'' {
 % -----------------------------------------------------------------------------------------------------------
 % --  TEMA 2  -----------------------------------------------------------------------------------------------
 % -----------------------------------------------------------------------------------------------------------
-prosoloistTemaTwoA = \relative c'' {
+stringTemaTwoAUpper = \relative c''' {
     \repeat volta 2 {
         a8 b cis a		cis r a b 
 	    cis fis cis r 	a  b cis a
@@ -213,7 +213,7 @@ prosoloistTemaTwoA = \relative c'' {
 	    {\time 3/4	e r cis8 d		e gis 		\time 4/4	e4 d c b}
 	}
 }
-rmiTemaTwoA = \relative c'' {
+stringTemaTwoALower = \relative c'' {
     \repeat volta 2 {
         fis8 gis a fis	a gis cis, d 
 	    e a e d  		fis8 gis a fis
@@ -229,7 +229,7 @@ rmiTemaTwoA = \relative c'' {
 	    gis b gis fis	a b cis a
 	} \alternative {
 	    {\time 5/4	cis b e, fis	gis b gis fis e d	}
-	    {\time 3/4	cis' b e, fis	gis r   	\time 4/4	r1 \time 3/4}
+	    {\time 3/4	cis' b e, fis	gis r   	\time 4/4	c4 b a g \time 3/4}
 	}
 }
 hammondTemaTwoA = \relative c' {
@@ -257,9 +257,8 @@ restTemaTwoA = \relative c'' {
 	}
 }
 
-
-prosoloistTemaTwoB = \relative c'' {
-    c8[ d]  c[ c] e[ c]
+stringTemaTwoB = \relative c'' {
+    c8[ d]  c[ d] e[ c]
 	c8[ d]  c[ c] e[ c]
 	c8[ d]  c[ c] e[ c]
 	c8[ d]  c[ c] e[ c]
@@ -315,15 +314,25 @@ prosoloistBridgeThree = \relative c'' {
 	d1
 	r1
 }
-hammondBridgeThree = \relative c' {
+hammondBridgeThree = \relative c'' {
 	<aes c ees>1
 	<f a c>1
 	<g b d>1~
 	<g b d>1
 	<aes c ees>1
 	<f a c>1
+	<d g b>1~
+	<d g b>1
+}
+choirsBridgeThree = \relative c'' {
+	<aes c ees>1  ^\markup { \tiny {mellotron choirs} }
+	<f a c>1
 	<g b d>1~
 	<g b d>1
+	<aes c ees>1
+	<f a c>1
+	<d g b>1
+	r1
 }
 restBridgeThree = \relative c'' {
     r1 r1 r1 r1 r1 r1 r1 r1
@@ -350,7 +359,7 @@ hammondRipresaIntro = \relative c' {
 	<d g b>1
 }
 stringsRipresaIntro = \relative c' {
-    <e g>2~				<g b>2
+    <e g>2~	 ^\markup { \tiny {string-I (fx)} }			<g b>2
 	<f a>2~				<a e'>2
 	<bes d>2			<f a>2
 	<e g>1
@@ -507,9 +516,9 @@ prosoloistPart = {
 	\break
 
 	% -- TEMA 2 --
-	\prosoloistTemaTwoA
+	\restTemaTwoA
 	\break
-	\prosoloistTemaTwoB
+	\restTemaTwoB
 	\break
 
 	% D.S. e ripetizione TEMA 1
@@ -590,8 +599,12 @@ musicalboxPart = {
 	\restTemaOneB
 
 	% -- TEMA 2 --
-	\rmiTemaTwoA
-	\restTemaTwoB
+	\new Voice <<
+        {\stringTemaTwoAUpper}
+		\\
+		{\stringTemaTwoALower}
+    >>
+	\stringTemaTwoB
 
 	% D.S. e ripetizione TEMA 1
 	\repeat volta 2 {
@@ -600,7 +613,7 @@ musicalboxPart = {
 	\restTemaOneBbis
 	
 	% -- BRIDGE E RIPRESA INTRO
-	\restBridgeThree
+	\choirsBridgeThree
 	\stringsRipresaIntro
 	\stringsRipresaIntroSolo
 
@@ -639,7 +652,7 @@ musicalboxPart = {
             \set Staff.instrumentName = \markup { "Hammond" }
             \hammondPart
         >>
-        \new Staff = "RS202" \with { midiInstrument = #"violin" }
+        \new Staff = "MBOX" \with { midiInstrument = #"violin" }
         <<
             \set Staff.instrumentName = \markup { "RS202" }
             \musicalboxPart
