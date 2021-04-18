@@ -69,9 +69,18 @@ rhTemaD = \relative c''' {
 }
 rhTemaE = \relative c''' {
     \times 8/11 { e16 c ees aes, c e, aes ees f c ees }
-	\times 8/11 { aes, c e, aes ees f c ees a, c aes }
-	f'16 ees aes4.
+	\times 8/11 { aes, c e, aes ees f c ees aes, c aes }
+	\time 3/8
+	f'16 ees aes4
+	\time 4/8
 }
+%rhTemaE = \relative c''' {
+%    \time 9/8
+%    \times 2/3 { e16 c ees }    \times 2/3 { aes,16 c e, }    \times 2/3 { aes16 ees f }
+%	\times 2/3 { c16 ees aes, } \times 2/3 { c16 e, aes  }    \times 2/3 { ees16 f c }
+%	\times 2/3 { ees16 aes, c } \times 2/3 { aes16 f' ees } aes8 
+%	\time 4/8
+%}
 rhTemaF = \relative c {
     d16 ees bes' aes		g aes f' ees
 	d16 ees bes' aes		g aes f' ees
@@ -179,8 +188,12 @@ lhTemaD = \relative c' {
 lhTemaE = \relative c' {
 	<f bes d>2~
 	<f bes d>2~
-	<f bes d>2~
+
+	<f bes d>4.~
 }
+%lhTemaE = \relative c' {
+%    <f bes d>2.~  <f bes d>4.~
+%}
 lhTemaF = \relative c' {
 	<f bes d>2~
 	<f bes d>2~
@@ -250,7 +263,7 @@ lhTemaN = \relative c' {
 % ===========================================================================================================
 rhPart = {
     \clef violin
-	\time 2/4
+	\time 4/8
 
 	r2 ^\markup { \tiny {sax + sax} }
 	\rhTemaA
@@ -272,7 +285,7 @@ rhPart = {
 
 lhPart = {
     \clef violin
-	\time 2/4
+	\time 4/8
 
 	r2 ^\markup { \tiny {(84.8848.004) + 2nd soft} }
 	\lhTemaA
