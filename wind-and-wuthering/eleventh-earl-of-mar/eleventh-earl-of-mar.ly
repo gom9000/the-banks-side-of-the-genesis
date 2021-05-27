@@ -273,9 +273,11 @@ stringsTemaThreeB = \relative c'' {
 	<c f a>1
 	<c f aes>1
 
-	<b e g>1~ \>
-	<b e g>1
-	r1 \! r1 r1 r1 r1 r1
+	<b d e g>1~ \>
+	<b d e g>1~
+	<b d e g>1~
+	<b d e g>1~ \!
+	<b d e g>1~ <b d e g>1~ <b d e g>1~ <b d e g>1
 }
 restTemaThreeB = \relative c'' {
 	r1 r1 r1 r1
@@ -285,11 +287,8 @@ restTemaThreeB = \relative c'' {
 % --  BRIDGE B  ---------------------------------------------------------------------------------------------
 % -----------------------------------------------------------------------------------------------------------
 hammondBridgeB = \relative c'' {
-    \repeat volta 2 {
-        \compressFullBarRests
-        R1*8
-	    \expandFullBarRests
-	}
+    R1*8
+
 	\repeat volta 2 {
         R1*8
 		\time 7/4 R1..*3
@@ -298,37 +297,45 @@ hammondBridgeB = \relative c'' {
 	    {r1}
 	    {r1}
 	}
-	\compressFullBarRests
+
     R1*8
-	\expandFullBarRests
 
-	r1 \time 2/4 r2 \time 4/4 r1
-	<cis fis a cis>1~ ^\markup { \tiny {mellotron choirs} } \<
-	<cis fis a cis>1
-	<cis fis a cis e>1 \f
-	<cis fis a cis e>1
-	<b e gis b>1~ \>
-	<b e gis b>1
+	<fis, a cis e>1~
+	\time 2/4
+	<fis a cis e>2~
+	\time 4/4
+	<fis a cis e>1~
+	<fis a cis e>1~
+	<fis a cis e>1~
 
-	<cis fis a cis>2.~ \! \< <cis fis a b cis>4
-	<cis fis a cis e>2. <cis fis a b cis e>4
-	<b e gis b e>1 \f \>
-	r1 \!
+	<fis a cis e>1~
+	<fis a cis e>1~
+	<e gis b e>1~
+	<e gis b e>1~
+
+	<fis a cis e>1~
+	<fis a cis e>1~
+	<e gis b e>1~
+	<e gis b e>1
 }
 stringsBridgeB = \relative c' {
-    \repeat volta 2 {
-        \compressFullBarRests
-        R1*8
-	    \expandFullBarRests
-	}
-	\repeat volta 2 {
-	    <g' b d e>1~ \<
-		<g b d e>1~ \p
-		<g b d e>1~
-		<g b d e>1~
+    <g' b c e>1~
+    <g b c e>1~
+	<g b c e>1~
+	<g b c e>1~
+	<a c e>4.~ <g b e>8~ <g b e>2~
+	<f a e'>4.~ <g b e>8~ <g b e>2~
+	<a c e>4.~ <g b e>8~ <g b e>2~
+	<f a e'>4.~ <g b e>8~ <g b e>2
 
-        <g b d e>1~
-		<g b d e>1~
+	\repeat volta 2 {
+	    <b d e g>1~ ^\markup { \tiny {add phaser} } \<
+		<b d e g>1~ \p
+		<b d e g>1~
+		<b d e g>1~
+
+        <b d e g>1~
+		<b d e g>1
 		<g b c e>1~
 		<g b c e>1
 
@@ -343,29 +350,39 @@ stringsBridgeB = \relative c' {
 	    {<e g c>1~}
 	    {<f g bes d>1}
 	}
-	\compressFullBarRests
-    R1*8
-	\expandFullBarRests
-    
-	r1 \time 2/4 r2 \time 4/4 r1
-	<fis a cis>1~ ^\markup { \tiny {mellotron choirs} } \<
-	<fis a cis>1
-	<fis a cis e>1~ \f
-	<fis a cis e>1
-	<e gis b>1~ \>
-	<e gis b>1
 
-	<fis a cis>2.~ \! \< <fis b cis>4
-	<fis a cis e>2. <fis b cis e>4
-	<e gis b e>1 \f \>
-	r1 \! ^\markup { \tiny {strings-I} }
+	<e a c e>4.~ <e g b e>8~ <e g b e>2~
+	<e f a e'>4.~ <e g b e>8~ <e g b e>2~
+	<e a c e>4.~ <e g b e>8~ <e g b e>2~
+	<e f a e'>4.~ <e g b e>8~ <e g b e>2~
+    <e a c e>4.~ <e g b e>8~ <e g b e>2~
+	<e f a e'>4.~ <e g b e>8~ <e g b e>2~
+	<e a c e>4.~ <e g b e>8~ <e g b e>2~
+	<e f a e'>4.~ <e g b e>8~ <e g b e>2
+
+	R1 ^\markup { \tiny {mellotron choirs} }
+	\time 2/4
+	R2
+	\time 4/4
+	R1
+	R1
+	R1
+
+	<fis a cis e>1~  \<
+	<fis a cis e>1~
+	<e gis b e>1~ \! \>
+	<e gis b e>1~
+
+	<fis a cis e>1~ \! \<
+	<fis a cis e>1~
+	<e gis b e>1~ \! \>
+	<e gis b e>1 \! ^\markup { \tiny {strings-I} }
+
+
 }
 restBridgeB = \relative c'' {
-    \repeat volta 2 {
-        \compressFullBarRests
-        R1*8
-	    \expandFullBarRests
-	}
+    R1*8
+
 	\repeat volta 2 {
         R1*8
 		\time 7/4 R1..*3
@@ -374,9 +391,8 @@ restBridgeB = \relative c'' {
 	    {r1}
 	    {r1}
 	}
-	\compressFullBarRests
+
     R1*8
-	\expandFullBarRests
 
 	r1 \time 2/4 r2 \time 4/4 r1
 	r1 r1 r1 r1 r1 r1 r1 r1 r1 r1
