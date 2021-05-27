@@ -127,7 +127,7 @@ restBridgeA = \relative c'' {
 hammondTemaOne = \relative c' {
     \repeat volta 4 {
         <a d fis>4. <g c e>4 <b d g>8  <b d g>8 <a d fis>8
-	    <a cis e>4. <a d fis>4 <b d g>8 ^\markup { \tiny {4 times} } <g c e>8 <g b d>8
+	    <a cis e>4. <a d fis>4 <b d g>8 ^\markup { \tiny {4 times} } <g b d>8 <g c e>8
     }
     <a c f>4. <a c f>4 <g c e>8 <g c e>4
 	<g b d>4. <g b d>4 <g a cis e>8 <g a cis e>4
@@ -322,26 +322,26 @@ stringsBridgeB = \relative c' {
 	    \expandFullBarRests
 	}
 	\repeat volta 2 {
-	    <e g b d>1~ \<
-		<e g b d>1~ \p
-		<e g b d>1~
-		<e g b d>1~
+	    <g' b d e>1~ \<
+		<g b d e>1~ \p
+		<g b d e>1~
+		<g b d e>1~
 
-        <e g b d>1~
-		<e g b d>1~
-		<e f a b c>1~
-		<e f a b c>1
+        <g b d e>1~
+		<g b d e>1~
+		<g b c e>1~
+		<g b c e>1
 
 		\time 7/4
-		<d e g b>1~  <d e g b>2.~
-		<d e fis a>1~  <d e fis a>2.
-		<ees g bes>1~  <ees g bes>2~ <d g bes>4~
+		<e g b d>1~  <e g b d>2.~
+		<e fis a d>1~  <e fis a d>2.
+		<ees g bes d>1~  <ees g bes d>2~ <d g bes d>4~
 
 		\time 4/4
-		<c e g>1~
+		<e g c>1~
 	} \alternative {
-	    {<c e g>1~}
-	    {<d f g bes>1}
+	    {<e g c>1~}
+	    {<f g bes d>1}
 	}
 	\compressFullBarRests
     R1*8
