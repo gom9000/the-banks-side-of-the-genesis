@@ -212,7 +212,7 @@ stringsTemaTwoB = \relative c' {
     <bes d f>2~ <bes d f>8 <a c e>4 <bes d f>8~
 	<bes d f>2~ <bes d f>8 <d f a>4 <bes d f>8~
 	<bes d f>2~ <bes d f>8 <g c e>4 <bes d f>8~
-	<bes d f>2~ <bes d f>8 <d f a>4 r8
+	<bes d f>2~ <bes d f>8 <a c e>4 r8
 }
 restTemaTwoA = \relative c'' {
     \repeat volta 2 {
@@ -243,11 +243,11 @@ prosoloistTemaThree = \relative c'' {
 	e2. r4
 }
 stringsTemaThree = \relative c'' {
-    <c e a>1
-	<b e g>1
-	<c f a>1
-	<c f aes>1
-	<cis e a>1
+    <a c e>1
+	<g b e>1
+	<f a c>1
+	<f aes c>1
+	<e a cis>1
 }
 restTemaThree = \relative c'' {
 	r1 r1 r1 r1 r1
@@ -258,20 +258,20 @@ prosoloistTemaThreeB = \relative c'' {
 	f2. e4
 	f2. g4
 
-	a8 b a g4\staccato e4\staccato r8
-	a8 b a g4\staccato e4\staccato r8
-    a8 b a g4\staccato e4\staccato r8
-	a8 b a g4\staccato e4\staccato r8 \>
-	a'8 b a g4\staccato e4\staccato r8
-	a8 b a g4\staccato e4\staccato r8
-    a8 b a g4\staccato e4\staccato r8
-	a8 b a g4\staccato e4\staccato r8 \!
+	a8 b a g4 e4 r8
+	a8 b a g4 e4 r8
+    a8 b a g4 e4 r8
+	a8 b a g4 e4 r8 \>
+	a'8 b a g4 e4 r8
+	a8 b a g4 e4 r8
+    a8 b a g4 e4 r8
+	a8 b a g4 e4 r8 \!
 }
 stringsTemaThreeB = \relative c'' {
-    <c e a>1
-	<b e g>1
-	<c f a>1
-	<c f aes>1
+    <a c e>1
+	<g b e>1
+	<f a c>1
+	<f aes c>1
 
 	<b d e g>1~ \>
 	<b d e g>1~
@@ -290,46 +290,7 @@ hammondBridgeB = \relative c'' {
     R1*8
 
 	\repeat volta 2 {
-        R1*8
-		\time 7/4 R1..*3
-		\time 4/4 r1
-	} \alternative {
-	    {r1}
-	    {r1}
-	}
-
-    R1*8
-
-	<fis, a cis e>1~
-	\time 2/4
-	<fis a cis e>2~
-	\time 4/4
-	<fis a cis e>1~
-	<fis a cis e>1~
-	<fis a cis e>1~
-
-	<fis a cis e>1~
-	<fis a cis e>1~
-	<e gis b e>1~
-	<e gis b e>1~
-
-	<fis a cis e>1~
-	<fis a cis e>1~
-	<e gis b e>1~
-	<e gis b e>1
-}
-stringsBridgeB = \relative c' {
-    <g' b c e>1~
-    <g b c e>1~
-	<g b c e>1~
-	<g b c e>1~
-	<a c e>4.~ <g b e>8~ <g b e>2~
-	<f a e'>4.~ <g b e>8~ <g b e>2~
-	<a c e>4.~ <g b e>8~ <g b e>2~
-	<f a e'>4.~ <g b e>8~ <g b e>2
-
-	\repeat volta 2 {
-	    <b d e g>1~ ^\markup { \tiny {add phaser} } \<
+	    <b d e g>1~ ^\markup { \tiny {00.6804.030 + phaser} } \<
 		<b d e g>1~ \p
 		<b d e g>1~
 		<b d e g>1~
@@ -351,32 +312,75 @@ stringsBridgeB = \relative c' {
 	    {<f g bes d>1}
 	}
 
-	<e a c e>4.~ <e g b e>8~ <e g b e>2~
-	<e f a e'>4.~ <e g b e>8~ <e g b e>2~
-	<e a c e>4.~ <e g b e>8~ <e g b e>2~
-	<e f a e'>4.~ <e g b e>8~ <e g b e>2~
-    <e a c e>4.~ <e g b e>8~ <e g b e>2~
-	<e f a e'>4.~ <e g b e>8~ <e g b e>2~
-	<e a c e>4.~ <e g b e>8~ <e g b e>2~
-	<e f a e'>4.~ <e g b e>8~ <e g b e>2
+    R1*8
 
-	R1 ^\markup { \tiny {mellotron choirs} }
+	<fis a cis e>1~ ^\markup { \tiny {full-organ} }
+	\time 2/4
+	<fis a cis e>2~
+	\time 4/4
+	<fis a cis e>1~
+	<fis a cis e>1~
+	<fis a cis e>1~
+
+	<fis a cis e>1~
+	<fis a cis e>1~
+	<e gis b e>1~
+	<e gis b e>1~
+
+	<fis a cis e>1~
+	<fis a cis e>1~
+	<e gis b e>1~
+	<e gis b e>1
+}
+stringsBridgeB = \relative c' {
+    <g' b c e>1~
+    <g b c e>1~
+	<g b c e>1~
+	<g b c e>1
+    R1*4
+%%	<a c e>4.~ <g b e>8~ <g b e>2~
+%%	<f a e'>4.~ <g b e>8~ <g b e>2~
+%%	<a c e>4.~ <g b e>8~ <g b e>2~
+%%	<f a e'>4.~ <g b e>8~ <g b e>2
+
+	\repeat volta 2 {
+        R1*6 ^\markup { \tiny {choirs} }
+        <g g'>1~ \<
+        <g g'>1  \>
+		\time 7/4 R1.. \! R1..*2
+		\time 4/4 r1
+	} \alternative {
+	    {r1}
+	    {r1}
+	}
+
+    R1*8
+%%	<e a c e>4.~ <e g b e>8~ <e g b e>2~
+%%	<e f a e'>4.~ <e g b e>8~ <e g b e>2~
+%%	<e a c e>4.~ <e g b e>8~ <e g b e>2~
+%%	<e f a e'>4.~ <e g b e>8~ <e g b e>2~
+%%  <e a c e>4.~ <e g b e>8~ <e g b e>2~
+%%	<e f a e'>4.~ <e g b e>8~ <e g b e>2~
+%%	<e a c e>4.~ <e g b e>8~ <e g b e>2~
+%%	<e f a e'>4.~ <e g b e>8~ <e g b e>2
+
+	R1
 	\time 2/4
 	R2
 	\time 4/4
 	R1
-	R1
-	R1
+	<a cis fis>1~  \<
+	<a cis fis>1~
 
-	<fis a cis e>1~  \<
-	<fis a cis e>1~
-	<e gis b e>1~ \! \>
-	<e gis b e>1~
+	<a cis e>1~
+	<a cis e>1
+	<gis b e>1~ \! \>
+	<gis b e>1
 
-	<fis a cis e>1~ \! \<
-	<fis a cis e>1~
-	<e gis b e>1~ \! \>
-	<e gis b e>1 \! ^\markup { \tiny {strings-I} }
+	<a cis fis>1~ \! \<
+	<a cis e>1~
+	<gis b e gis>1~ \! \>
+	<gis b e gis>2. \! r4 ^\markup { \tiny {violins} }
 
 
 }
@@ -459,6 +463,7 @@ prosoloistPart = {
 	\break
 
 	% -- TEMA 1
+    \tempo 4 = 120
 	\restTemaOne
 	\break
 
@@ -501,6 +506,7 @@ prosoloistPart = {
 	\break
 
 	% -- FINALE
+    \tempo 4 = 80
 	\restFinale
 	\bar "|."
 }
@@ -552,11 +558,11 @@ hammondPart = {
 	\hammondFinale
 }
 
-musicalboxPart = {
+mellotronPart = {
     \clef violin
 	\time 4/4
 
-    r1 ^\markup { \tiny {strings-I} }
+    r1 ^\markup { \tiny {violins} }
 
 	% -- INTRO
 	\stringsIntro
@@ -613,7 +619,7 @@ musicalboxPart = {
         composer    = "music by Genesis"
         arranger    = "(transcribed by gos95 for study purposes)"
         enteredby   = "gos95"
-        piece       = \markup { \bold "                             " \smaller { (\note #"4"#1 = 120) } }
+        piece       = \markup { \bold "                             " \smaller { (\note #"4"#1 = 80) } }
 %		copyright   = "Copyright (c) 2020 Alessandro Fraschetti (mail: gos95@gommagomma.net)"
         tagline     = ""
     }
@@ -632,8 +638,8 @@ musicalboxPart = {
         >>
         \new Staff = "MusicalBox" \with { midiInstrument = #"synthstrings 1" }
         <<
-            \set Staff.instrumentName = \markup { "MBOX" }
-            \musicalboxPart
+            \set Staff.instrumentName = \markup { "Mellotron" }
+            \mellotronPart
         >>
     >>
     \layout { \context { \override VerticalAlignment #'forced-distance = #8 } }
