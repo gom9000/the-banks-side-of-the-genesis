@@ -441,9 +441,9 @@ hammondFinale = \relative c' {
 	<a cis e>1~
 	<a cis e>1
 
-    \repeat volta 3 {
+    \repeat volta 4 {
 	    <g b d>1~
-	    <g b d>1~
+	    <g b d>1~ ^\markup { \tiny {4 volte} }
 	}
 	<g b d>1\fermata
 }
@@ -473,7 +473,7 @@ stringsFinale = \relative c''' {
 	a1
 	e2 fis
 
-	\repeat volta 3 {
+	\repeat volta 4 {
 	    <b, d>1~
 	    <g b>1~
 	}
