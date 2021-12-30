@@ -4,8 +4,8 @@
 ## Scores
 * [The Lamb Lies Down on Broadway](the-lamb-lies-down-on-broadway)
 * [Fly on a Windshield + Broadway Melody](fly-on-a-windshield)
-* [Cuckoo Cocoon]
-* [In the Cage]
+* [Cuckoo Cocoon](cuckoo-cocoon)
+* [In the Cage](in-the-cage)
 * [The Grand Parade of Lifeless Packaging]
 * [Back in N.Y.C.]
 * [Hairless Heart]
