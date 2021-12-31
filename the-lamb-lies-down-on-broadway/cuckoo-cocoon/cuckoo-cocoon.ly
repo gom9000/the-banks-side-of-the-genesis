@@ -41,9 +41,9 @@
 % SOLOIST TEMA
 % ----------------------------------------------------------------------------
 soloistTema = \relative c'' {
-    r4 fis4~
+    r4  fis4~ \<
 	\bar "||"
-    fis2~
+    fis2~ \! \pp
 	fis2
 	g2~
 	g2
@@ -84,7 +84,7 @@ soloistPonte = \relative c'' {
 % RMI TEMA
 % ----------------------------------------------------------------------------
 rmiRightTema = \relative c' {
-    r2											e16 g16 c16 e16			g4
+    r2											e16 \mp g16 c16 e16			g4
 \break
     fis8 fis,16 e'8 fis,16 d'16 fis,16			cis'8 fis,16 d'8 fis,16 e'16 fis,16
 	d'8 e,16 c'8 e,16 b'16 e,16					a8 e16 g8 e16 a16 e16

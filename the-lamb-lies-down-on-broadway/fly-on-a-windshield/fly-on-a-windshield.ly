@@ -41,7 +41,7 @@
 % --  PART ONE  ---------------------------------------------------------------------------------------------
 % -----------------------------------------------------------------------------------------------------------
 partOneIntroChoirs = {
-	\time 4/4	<b e>2 ^\markup { \tiny { "choirs" } } <a d>4 <b e>4~
+	\time 4/4	<b e>2 \p ^\markup { \tiny { "choirs" } } <a d>4 <b e>4~
 	\time 3/4	<b e>2 <cis fis>4
 				<b e>4 <cis fis>4 <a d>4
 	\time 2/4	<b e>2~
@@ -112,7 +112,7 @@ partOneIntroArpRest = {
 				r1 r1 r1 r1
 }
 partOneIntroOrgan = \relative c' {
-				<e b' dis>1~^\markup { \tiny { "008000000" } } <e b' dis>1
+				<e b' dis>1~ \p ^\markup { \tiny { "hammond 008800000" } } <e b' dis>1
 				<e a cis>1
 				<e b' dis>1
 				<e a cis>1
@@ -133,7 +133,7 @@ fis fis fis fis fis fis fis fis b, b b b b b b b
 }
 partTwoRMI = {
     %% ------------------------------------------
-	<e b'>4~ ^\markup { \tiny { "rmi organ mode (or 846400568)" } }			<e b'>16	<g d'>8.
+	<e b'>4~ \mf ^\markup { \tiny { "rmi piano+harps+lute+organ mode (or hammond 846400568)" } }			<e b'>16	<g d'>8.
 	<e b'>4~			<e b'>16	<g d'>8.
 	<b fis'>4~			<b fis'>16	<g d'>8.
 	<b fis'>4~			<b fis'>16	<g d'>8.
@@ -274,11 +274,15 @@ partThree = {
 	    <f bes des>2.~ <f bes ees>4
 	    <f a c>2~ <f a ees'>2
 	} \alternative { {
-	    <f bes des>2.~ <f bes ees>4
-	    <f a c>1
+	    \override Hairpin.to-barline = ##f
+	    <f bes des>2.~ <f bes ees>4 \>
+	    <f a c>1 \!
+		\override Hairpin.to-barline = ##t
 	} {
-	    <f bes d>2. <e g c>4
-		<d fis a>1
+	    \override Hairpin.to-barline = ##f
+	    <f bes d>2. <e g c>4 \<
+		<d fis a>1 \! \mf \> \!
+		\override Hairpin.to-barline = ##t
 	}}
 }
 % -----------------------------------------------------------------------------------------------------------
@@ -286,7 +290,7 @@ partThree = {
 % -----------------------------------------------------------------------------------------------------------
 coda = {
     \repeat volta 6 {
-	d,4 a' d a' 
+	d,4 \p a' d a' 
 	d  a d, a  \mark \markup { \small \tiny { "6 volte" } }
     }
 	d, a' d a' 
@@ -303,6 +307,7 @@ rmiorgan = {
 	\partOneIntroArpRest
 	\break
 	\partOneIntroOrgan
+	\bar "||"
 	\break
 
 	\tempo 4 = 76
