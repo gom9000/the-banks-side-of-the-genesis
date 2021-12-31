@@ -40,16 +40,16 @@
 % --  INTRO  ------------------------------------------------------------------------------------------------
 % -----------------------------------------------------------------------------------------------------------
 rmiIntro = \relative c' {
-    <cis d fis b>1.~ \p
-	<cis d fis a>1.~
-	<cis d e a>1.~
-	<b d e g>1.~
-	<b d e fis>1.~
-	<b cis d fis>1.~
-	<a b cis e>1.~
-	<g b d>2.~	<g b cis>2.~
-	<g b d>2.~	<g b cis>2.~
-	<g b d>2.~	<g b cis>2.~
+    <cis d fis b>1. \p
+	<cis d fis a>1.
+	<cis d e a>1.
+	<b d e g>1.
+	<b d e fis>1.
+	<b cis d fis>1.
+	<a b cis e>1.
+	<g b d>2.	<g b cis>2.
+	<g b d>2.	<g b cis>2.
+	<g b d>2.	<g b cis>2.
 	<fis b d fis>1.~
 	<fis b d fis>1.~ \override Hairpin.to-barline = ##f
 	<fis b d fis>2. \> r2. \!
