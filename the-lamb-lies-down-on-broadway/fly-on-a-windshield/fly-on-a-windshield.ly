@@ -112,7 +112,7 @@ partOneIntroArpRest = {
 				r1 r1 r1 r1
 }
 partOneIntroOrgan = \relative c' {
-				<e b' dis>1~ \p ^\markup { \tiny { "hammond 008800000" } } <e b' dis>1
+				<e b' dis>1~ \p ^\markup { \tiny { "hammond 008800000 (no perc.)" } } <e b' dis>1
 				<e a cis>1
 				<e b' dis>1
 				<e a cis>1
@@ -133,7 +133,7 @@ fis fis fis fis fis fis fis fis b, b b b b b b b
 }
 partTwoRMI = {
     %% ------------------------------------------
-	<e b'>4~ \mf ^\markup { \tiny { "rmi piano+harps+lute+organ mode (or hammond 846400568)" } }			<e b'>16	<g d'>8.
+	<e b'>4~ \mf ^\markup { \tiny { "piano+harpsi+lute+organ mode (or hammond 846400568)" } }			<e b'>16	<g d'>8.
 	<e b'>4~			<e b'>16	<g d'>8.
 	<b fis'>4~			<b fis'>16	<g d'>8.
 	<b fis'>4~			<b fis'>16	<g d'>8.
@@ -345,16 +345,16 @@ mellotron = {
         composer    = "music by Genesis"
         arranger    = "(transcribed by gos95 for study purposes)"
         enteredby   = "gos95"
-        piece       = \markup { \bold "                             " \smaller { (\note #"2"#1 = 76) } }
+        piece       = \markup { \bold "                             " \smaller { (\note #"4"#1 = 150) } }
 %		copyright   = "Copyright (c) 2018 Alessandro Fraschetti (mail: gos95@gommagomma.net)"
         tagline     = ""
     }
 
     \score {
     <<
-        \new Staff = "RMI" \with { midiInstrument = #"drawbar organ" }
+        \new Staff = "RMIEP" \with { midiInstrument = #"drawbar organ" }
         <<
-            \set Staff.instrumentName = \markup { "RMI / Organ" }
+            \set Staff.instrumentName = \markup { "RMIEP / Organ" }
             \rmiorgan
         >>
         \new Staff = "Mellotron" \with { midiInstrument = #"choir aahs" }
@@ -364,7 +364,7 @@ mellotron = {
         >>
     >>
     \layout { \context { \override VerticalAlignment #'forced-distance = #8 } }
-    \midi { \context { \Score tempoWholesPerMinute = #(ly:make-moment 76 2) } }
+    \midi { \context { \Score tempoWholesPerMinute = #(ly:make-moment 150 4) } }
     }
 }
 % ===========================================================================================================

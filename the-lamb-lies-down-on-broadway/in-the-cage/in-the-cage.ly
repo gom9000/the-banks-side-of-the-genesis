@@ -40,7 +40,7 @@
 % --  INTRO  ------------------------------------------------------------------------------------------------
 % -----------------------------------------------------------------------------------------------------------
 rmiIntro = \relative c' {
-    <cis d fis b>1. \p
+    <cis d fis b>1. ^\markup { \tiny { "piano+harpsi+lute" } } \p
 	<cis d fis a>1.
 	<cis d e a>1.
 	<b d e g>1.
@@ -599,9 +599,9 @@ mellotron = {
 		    \set Staff.instrumentName = "Hammond"
 	        \hammond
         >>
-		\new Staff = "RMI" \with { midiInstrument = #"drawbar organ" }
+		\new Staff = "RMIEP" \with { midiInstrument = #"drawbar organ" }
 	    <<
-		    \set Staff.instrumentName = "RMI"
+		    \set Staff.instrumentName = "RMIEP"
 	        \rmi
         >>
 		\new Staff = "Mellotron" \with { midiInstrument = #"string ensemble 1" }

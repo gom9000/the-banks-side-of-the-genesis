@@ -427,6 +427,7 @@ rmiRight = {
 
 	\repeat volta 8 {
 	\relative c'  \rmiRightEnona
+	\override Score.RehearsalMark #'break-visibility = #begin-of-line-invisible \override Score.RehearsalMark #'self-alignment-X = #RIGHT \mark \markup { \tiny { "8 volte" } }
 	}
 }
 rmiLeft = {
@@ -526,9 +527,9 @@ rmiLeft = {
 
     \score {
     <<
-        \new Staff = "RMI" \with { midiInstrument = #"electric piano 1" }
+        \new Staff = "RMIEP" \with { midiInstrument = #"electric piano 1" }
         <<
-            \set Staff.instrumentName = \markup { "RMI" }
+            \set Staff.instrumentName = \markup { "RMIEP" }
             << 
 				\new Voice = "right" { \voiceOne \rmiRight }
 				\new Voice = "left" {  \voiceTwo \rmiLeft }

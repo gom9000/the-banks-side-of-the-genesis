@@ -29,7 +29,7 @@
 
 \version "2.12.3"
 #(ly:set-option 'delete-intermediate-files #t)
-#(set-global-staff-size 16)
+#(set-global-staff-size 15)
 
 
 % ===========================================================================================================
@@ -177,11 +177,10 @@ soloist = {
 	\key d \major
     \time 2/4
 
-	\mark \markup { \tiny { "                         fuzz guitar 1" } }
     \set Score.skipBars = ##t
 	\override MultiMeasureRest #'expand-limit = 1
 
-	R2*8		% INTRO
+	R2*8	^\markup { \tiny { "fuzz guitar 1" } }	% INTRO
 	\bar "||"
 	R2*16       % TEMA CANTATO
 	\soloistTema
@@ -200,7 +199,7 @@ rmiRight = {
     \set Score.skipBars = ##t
 	\override MultiMeasureRest #'expand-limit = 1
 
-	R2*8		% INTRO
+	R2*8 		% INTRO
 	\bar "||"
 	R2*17       % TEMA CANTATO
 	R2*17       % TEMA CANTATO + SOLOIST
@@ -221,7 +220,7 @@ rmiLeft = {
     \set Score.skipBars = ##t
 	\override MultiMeasureRest #'expand-limit = 1
 
-	R2*8		% INTRO
+	R2*8 ^\markup { \tiny { "piano+harpsi+lute" } }		% INTRO
 	\bar "||"
 	R2*17       % TEMA CANTATO
 	R2*17       % TEMA CANTATO + SOLOIST
@@ -261,9 +260,9 @@ rmiLeft = {
             \set Staff.instrumentName = \markup { "Prosoloist" }
             \soloist
         >>
-        \new PianoStaff = "RMI" \with {midiInstrument = #"acoustic guitar (nylon)" }
+        \new PianoStaff = "RMIEP" \with {midiInstrument = #"acoustic guitar (nylon)" }
         <<
-            \set PianoStaff.instrumentName = "RMI"
+            \set PianoStaff.instrumentName = "RMIEP"
             \new Staff = upper \rmiRight
 	        \new Staff = lower \rmiLeft
         >>
