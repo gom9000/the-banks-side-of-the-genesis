@@ -8,9 +8,9 @@
 * [In The Cage](in-the-cage)
 * [The Grand Parade of Lifeless Packaging](the-grand-parade-of-lifeless-packaging)
 * [Back in N.Y.C.]
-* [Hairless Heart]
+* [Hairless Heart](hairless-heart)
 * [Counting out Time]
-* [The Carpet Crawlets]
+* [The Carpet Crawlets](the-carpet-crawlers)
 * [The Chamber of 32 Doors]
 * [Lilywhite Lilith]
 * [The Waiting Room]
