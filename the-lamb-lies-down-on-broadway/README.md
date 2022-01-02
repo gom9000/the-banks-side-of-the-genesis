@@ -3,10 +3,10 @@
 
 ## Scores
 * [The Lamb Lies Down on Broadway](the-lamb-lies-down-on-broadway)
-* [Fly on a Windshield + Broadway Melody](fly-on-a-windshield)
+* [Fly on a Windshield / Broadway Melody](fly-on-a-windshield)
 * [Cuckoo Cocoon](cuckoo-cocoon)
-* [In the Cage](in-the-cage)
-* [The Grand Parade of Lifeless Packaging]
+* [In The Cage](in-the-cage)
+* [The Grand Parade of Lifeless Packaging](the-grand-parade-of-lifeless-packaging)
 * [Back in N.Y.C.]
 * [Hairless Heart]
 * [Counting out Time]
@@ -21,6 +21,6 @@
 * [The Colony of Slippermen]
 * [Ravine]
 * [The Light Dies Down on Broadway]
-* [Riding the Scree]
+* [Riding The Scree]
 * [In The Rapids]
 * [It]

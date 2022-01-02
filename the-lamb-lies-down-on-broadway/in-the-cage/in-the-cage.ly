@@ -568,7 +568,54 @@ mellotron = {
 	% CODA
 }
 
+bridge_rmiep = {
+    \clef violin
+	\time 12/8
+	\key d \major
 
+	R1.*4
+
+	\relative c' {
+	<a b d fis>1. \p \>
+	r1. \!
+	<a b d fis>1. \pp \>
+	r1. \!
+    <a b d fis>1. \pp \>
+	r1. \!
+
+	<d e g b>1.	\p
+	<fis g b d>2.\mp		<a b d fis>2.
+	<a cis e fis a>2.		<cis e fis a cis>2.
+	<b d fis gis b>1.~
+	<b d fis gis b>1. \>
+	r1. \!
+	}
+	\bar "|."
+}
+bridge_mellotron = {
+    \clef violin
+	\time 12/8
+	\key d \major
+
+	<d' fis'>8 \ppp \< <d' b'> <d' fis'> <d' e'> <d' b'> <d' e'> <d' fis'>8 <d' b'> <d' fis'> <d' e'> <d' b'> <d' e'>
+	<d' fis'>8\! \p <d' b'> <d' fis'> <d' e'> <d' b'> <d' e'> <d' fis'>8 <d' b'> <d' fis'> <d' e'> <d' b'> <d' e'>
+	<d' fis'>8 <d' b'> <d' fis'> <d' e'> <d' b'> <d' e'> <d' fis'>8 <d' b'> <d' fis'> <d' e'> <d' b'> <d' e'>
+	<d' fis'>8 <d' b'> <d' fis'> <d' e'> <d' b'> <d' e'> <d' fis'>8 <d' b'> <d' fis'> <d' e'> <d' b'> <d' e'>
+
+	<d' fis'>8 <d' b'> <d' fis'> <d' e'> <d' b'> <d' e'> <d' fis'>8 <d' b'> <d' fis'> <d' e'> <d' b'> <d' e'>
+	<d' fis'>8 <d' b'> <d' fis'> <d' e'> <d' b'> <d' e'> <d' fis'>8 <d' b'> <d' fis'> <d' e'> <d' b'> <d' e'>
+	<d' fis'>8 <d' b'> <d' fis'> <d' e'> <d' b'> <d' e'> <d' fis'>8 <d' b'> <d' fis'> <d' e'> <d' b'> <d' e'>
+	<d' fis'>8 <d' b'> <d' fis'> <d' e'> <d' b'> <d' e'> <d' fis'>8 <d' b'> <d' fis'> <d' e'> <d' b'> <d' e'>
+	<d' fis'>8 <d' b'> <d' fis'> <d' e'> <d' b'> <d' e'> <d' fis'>8 <d' b'> <d' fis'> <d' e'> <d' b'> <d' e'>
+	<d' fis'>8 <d' b'> <d' fis'> <d' e'> <d' b'> <d' e'> <d' fis'>8 <d' b'> <d' fis'> <d' e'> <d' b'> <d' e'>
+
+	<d' fis'>8 <d' b'> <d' fis'> <d' e'> <d' b'> <d' e'> <d' fis'>8 <d' b'> <d' fis'> <d' e'> <d' b'> <d' e'>
+	<d' fis'>8 <d' b'> <d' fis'> <d' e'> <d' b'> <d' e'> <d' fis'>8 <d' b'> <d' fis'> <d' e'> <d' b'> <d' e'>
+	<d' fis'>8 <d' b'> <d' fis'> <d' e'> <d' b'> <d' e'> <d' fis'>8 <d' b'> <d' fis'> <d' e'> <d' b'> <d' e'>
+	<d' fis'>8 <d' b'> <d' fis'> <d' e'> <d' b'> <d' e'> <d' fis'>8 <d' b'> <d' fis'> <d' e'> <d' b'> <d' e'>
+	<d' fis'>8 \> <d' b'> <d' fis'> <d' e'> <d' b'> <d' e'> <d' fis'>8 <d' b'> <d' fis'> <d' e'> <d' b'> <d' e'>
+	<d' fis'>8 <d' b'> <d' fis'> <d' e'> <d' b'> <d' e'> <d' fis'>8 <d' b'> <d' fis'> <d' e'> <d' b'> <d' e'> \!
+}
 % ===========================================================================================================
 % ---------------------------------------------  B O O K  ---------------------------------------------------
 % ===========================================================================================================
@@ -612,6 +659,23 @@ mellotron = {
     >>
     \layout { \context { \override VerticalAlignment #'forced-distance = #8 } }
     \midi { \tempo 4. = 72 }
+    }
+
+    \score {
+    <<
+		\new Staff = "RMIEP" \with { midiInstrument = #"drawbar organ" }
+	    <<
+		    \set Staff.instrumentName = "RMIEP"
+	        \bridge_rmiep
+        >>
+		\new Staff = "Mellotron" \with { midiInstrument = #"flute" }
+	    <<
+		    \set Staff.instrumentName = "Mellotron"
+	        \bridge_mellotron
+        >>
+    >>
+    \layout { \context { \override VerticalAlignment #'forced-distance = #8 } }
+    \midi { \tempo 4. = 76 }
     }
 }
 % ===========================================================================================================
