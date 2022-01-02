@@ -9,7 +9,7 @@
 * [The Grand Parade of Lifeless Packaging](the-grand-parade-of-lifeless-packaging)
 * [Back in N.Y.C.]
 * [Hairless Heart](hairless-heart)
-* [Counting out Time]
+* [Counting out Time](counting-out-time)
 * [The Carpet Crawlets](the-carpet-crawlers)
 * [The Chamber of 32 Doors]
 * [Lilywhite Lilith]
