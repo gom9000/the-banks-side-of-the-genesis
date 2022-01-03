@@ -11,7 +11,7 @@
 * [Hairless Heart](hairless-heart)
 * [Counting out Time](counting-out-time)
 * [The Carpet Crawlets](the-carpet-crawlers)
-* [The Chamber of 32 Doors]
+* [The Chamber of 32 Doors](the-chamber-of-32-doors)
 * [Lilywhite Lilith]
 * [The Waiting Room]
 * [Anyway]
