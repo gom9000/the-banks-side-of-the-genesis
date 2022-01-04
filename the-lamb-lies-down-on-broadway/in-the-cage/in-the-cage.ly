@@ -40,7 +40,7 @@
 % --  INTRO  ------------------------------------------------------------------------------------------------
 % -----------------------------------------------------------------------------------------------------------
 rmiIntro = \relative c' {
-    <cis d fis b>1. ^\markup { \tiny { "piano+harpsi+lute" } } \p
+    <cis d fis b>1. ^\markup { \tiny { "piano+harpsi+lute (sustain)" } } \p
 	<cis d fis a>1.
 	<cis d e a>1.
 	<b d e g>1.
@@ -573,7 +573,7 @@ bridge_rmiep = {
 	\time 12/8
 	\key d \major
 
-	R1.*4
+	r1. ^\markup { \tiny { "piano+harpsi+lute (sustain)" } } r1. r1. r1.
 
 	\relative c' {
 	<a b d fis>1. \p \>
@@ -597,7 +597,7 @@ bridge_mellotron = {
 	\time 12/8
 	\key d \major
 
-	<d' fis'>8 \ppp \< <d' b'> <d' fis'> <d' e'> <d' b'> <d' e'> <d' fis'>8 <d' b'> <d' fis'> <d' e'> <d' b'> <d' e'>
+	<d' fis'>8 ^\markup { \tiny { "flute" } } \ppp \< <d' b'> <d' fis'> <d' e'> <d' b'> <d' e'> <d' fis'>8 <d' b'> <d' fis'> <d' e'> <d' b'> <d' e'>
 	<d' fis'>8\! \p <d' b'> <d' fis'> <d' e'> <d' b'> <d' e'> <d' fis'>8 <d' b'> <d' fis'> <d' e'> <d' b'> <d' e'>
 	<d' fis'>8 <d' b'> <d' fis'> <d' e'> <d' b'> <d' e'> <d' fis'>8 <d' b'> <d' fis'> <d' e'> <d' b'> <d' e'>
 	<d' fis'>8 <d' b'> <d' fis'> <d' e'> <d' b'> <d' e'> <d' fis'>8 <d' b'> <d' fis'> <d' e'> <d' b'> <d' e'>
@@ -646,15 +646,15 @@ bridge_mellotron = {
 		    \set Staff.instrumentName = "Hammond"
 	        \hammond
         >>
-		\new Staff = "RMIEP" \with { midiInstrument = #"drawbar organ" }
-	    <<
-		    \set Staff.instrumentName = "RMIEP"
-	        \rmi
-        >>
 		\new Staff = "Mellotron" \with { midiInstrument = #"string ensemble 1" }
 	    <<
 		    \set Staff.instrumentName = "Mellotron"
 	        \mellotron
+        >>
+		\new Staff = "RMIEP" \with { midiInstrument = #"drawbar organ" }
+	    <<
+		    \set Staff.instrumentName = "RMIEP"
+	        \rmi
         >>
     >>
     \layout { \context { \override VerticalAlignment #'forced-distance = #8 } }
@@ -663,15 +663,15 @@ bridge_mellotron = {
 
     \score {
     <<
-		\new Staff = "RMIEP" \with { midiInstrument = #"drawbar organ" }
-	    <<
-		    \set Staff.instrumentName = "RMIEP"
-	        \bridge_rmiep
-        >>
 		\new Staff = "Mellotron" \with { midiInstrument = #"flute" }
 	    <<
 		    \set Staff.instrumentName = "Mellotron"
 	        \bridge_mellotron
+        >>
+		\new Staff = "RMIEP" \with { midiInstrument = #"drawbar organ" }
+	    <<
+		    \set Staff.instrumentName = "RMIEP"
+	        \bridge_rmiep
         >>
     >>
     \layout { \context { \override VerticalAlignment #'forced-distance = #8 } }
