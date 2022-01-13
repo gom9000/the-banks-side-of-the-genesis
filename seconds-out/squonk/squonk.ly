@@ -947,36 +947,34 @@ RMILowerPart = {
         instrument  = "keyboards"
         composer    = "music by Genesis"
         arranger    = "(transcribed by gos95 for study purposes)"
-        enteredby   = "NCB"
+        enteredby   = "gos95"
         piece       = \markup { \bold "                             " \smaller { (\note #"4"#1 = 100) } }
-%		copyright   = "Copyright (c) 2020 Alessandro Fraschetti (mail: gos95@gommagomma.net)"
+%		copyright   = "Copyright (c) 2018 Alessandro Fraschetti (mail: gos95@gommagomma.net)"
         tagline     = ""
     }
 
     \score {
+	<<
+  	    \new Staff = "Prosoloist" \with { midiInstrument = #"lead 2 (sawtooth)" }
 	    <<
-  	        \new Staff = "Prosoloist" \with { midiInstrument = #"lead 2 (sawtooth)" }
-	        <<
-		        \set Staff.instrumentName = \markup { "Prosoloist" }
-	            \prosoloistPart
-            >>
-
-            \new PianoStaff = "Hammond" \with {midiInstrument = #"rock organ" }
-		    <<
-                \set PianoStaff.instrumentName = "Hammond"
-	            \new Staff = upper \hammondUpperPart
-	            \new Staff = lower \hammondLowerPart
-            >>
-
-            \new PianoStaff = "RMI" \with {midiInstrument = #"electric piano 1" }
-		    <<
-                \set PianoStaff.instrumentName = "RMI"
-	            \new Staff = upper \RMIUpperPart
-	            \new Staff = lower \RMILowerPart
-            >>
-		>>
-	    \layout { \context { \override VerticalAlignment #'forced-distance = #8 } }
-	    \midi { \context { \Score tempoWholesPerMinute = #(ly:make-moment 100 4) } }
+	        \set Staff.instrumentName = \markup { "Prosoloist" }
+	        \prosoloistPart
+        >>
+        \new PianoStaff = "Hammond" \with {midiInstrument = #"rock organ" }
+		<<
+            \set PianoStaff.instrumentName = "Hammond"
+	        \new Staff = upper \hammondUpperPart
+	        \new Staff = lower \hammondLowerPart
+        >>
+        \new PianoStaff = "RMI" \with {midiInstrument = #"electric piano 1" }
+		<<
+            \set PianoStaff.instrumentName = "RMI"
+	        \new Staff = upper \RMIUpperPart
+	        \new Staff = lower \RMILowerPart
+        >>
+	>>
+	\layout { \context { \override VerticalAlignment #'forced-distance = #8 } }
+	\midi { \context { \Score tempoWholesPerMinute = #(ly:make-moment 100 4) } }
     }
 
 }
