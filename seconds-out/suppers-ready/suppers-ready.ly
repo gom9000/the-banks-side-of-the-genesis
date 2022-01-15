@@ -94,7 +94,7 @@ rmiLeftTema = \relative c {
 % ===========================================================================================================
 piece-one-guitar = {
 	\clef violin
-	\key d \major
+	\key c \major
     \time 4/4
 
     \set Score.skipBars = ##t
@@ -142,38 +142,87 @@ piece-one-guitar = {
 	}	
 	} \alternative {
 	  { 
-	    e\4 g\3 d'\2 e\4			g\3 d'\2 e\4 g\3
-		e\4 g\3 cis'\2 e\4			g\3 cis'\2 e\4 g\3
-		e\4 g\3 d'\2 fis'\1			e'\1 d'\2 g\3 d'\2
-		e\4 g\3 cis'\2 d'\2			cis'\2 r4.
-		\break
+	    e\4 g\3 d'\2 e\4			g\3 e'\1 d'\2 g\3
+		e\4 g\3 cis'\2 e\4			e'\1 cis'\2 g\3 e'\1
+		g\3 d'\2 e\4 fis'\1			e'\1 d'\2 g\3 e\4
+		g\3 cis'\2 e\4 d'\2			cis'\2 r4.
 	  }
 	  {
 	    g8\3 d'\2 g'\1 g\3			d'\2 g'\1 g\3 d'\2
 		g\3 d'\2 f'\1 g\3			d'\2 f'\1 g\3 d'\2
 		g\3 d'\2 f'\1 g\3			d'\2 f'\1 g\3 d'\2
 		g\3 d'\2 g'\1 g\3			d'\2 g'\1 g\3 d'\2
-
+        \break
 		a\3 d'\2 g'\1 a\3			d'\2 g'\1 a\3 d'\2
 		a\3 d'\2 fis'\1 a\3			d'\2 fis'\1 a\3 d'\2
 		a\3 d'\2 g'\1 a\3			d'\2 g'\1 a\3 d'\2
-		a\3 d'\2 fis'\1 r			fis'\2 e'\3 d'\3 a\4
+		a\3 d'\2 fis'\1 r			fis'\2 e'\3 d'\3 b\4
 		a\4 r2.
 		\break
 	  }
 	}
 	\bar "||"
-
 }
 piece-one-rmiep-right = {
 	\clef violin
-	\key d \major
+	\key c \major
     \time 4/4
 
     \set Score.skipBars = ##t
 	\override MultiMeasureRest #'expand-limit = 1
 
-	R1*47 ^\markup { \tiny { "piano+harpsi+lute" } }
+	R1*38 ^\markup { \tiny { "piano+lute" } }
+	R1*4
+	\tempo 4 = 138
+	R1*16
+	\relative c' {
+	    r1
+		f8 a d f~				f4. r8
+		e8 c a c~				c4. r8
+		b8 c d c				r b a r
+		g8 a b a				r g f r
+		e4.    d4.				    c4
+		a4.	   g4.					f4
+		d1
+		r1
+		r1
+		\appoggiatura {d''16 f a} c4 b8 a				g4 f8 e8
+		\appoggiatura {c16 e g} b4 a8 g					f e d4
+		\appoggiatura {a16 c e} g4 f8 e					d4 c8 b
+		\appoggiatura {f16 a d} f4 e8 d					c b a4
+		\appoggiatura {f16 a c} e4 d8 c 	\appoggiatura {e,16 g c} e4 d8 c
+		\appoggiatura {f,16 a c} e4 d8 c 	\appoggiatura {e,16 g c} e4 d8 c
+		a4.   g4.					a4
+		d,4.  g4.                   a4
+		c'16 b a g f8\staccato e\staccato d c\staccato		g'16 f e d 
+		c8\staccato  b\staccato a r							e'16 d c b a8\staccato g\staccato
+		a b\staccato  c16 b a g								f e f g a g f e
+		d2 r2
+        f4\espressivo r a\espressivo c\espressivo
+		b\espressivo r c\espressivo d\espressivo
+		e\espressivo  r d\espressivo c\espressivo
+		b\espressivo r  c\espressivo r 
+		a2.\espressivo r4
+		f'2.\espressivo r4
+		d2.\espressivo r4
+		e2.\espressivo r4
+		c2.\espressivo r4
+		f,\espressivo g\espressivo	a\espressivo c\espressivo
+		d,1\espressivo
+		r1
+		a'8 bes d f~ f4. r8
+		g, bes d e~ e4. r8
+		g, a c e~ e4. r8
+		f, a c d~ d4. r8
+		f, a b c~ c4. r8
+		e, g b c~ c4. r8
+		r1 r1 r1
+		bes16 a bes a  	f'8 r 			bes,16 a bes a 		d8 r
+		bes16 a bes a   f' a, bes a		d a bes a   		bes a bes a
+		bes a g a  		bes a g a		bes a g a 			bes a g a
+		bes a g a 		bes a g a		bes a g f			g a bes r
+		a1
+	}
 
 	\bar "|."
 }
@@ -185,7 +234,37 @@ piece-one-rmiep-left = {
     \set Score.skipBars = ##t
 	\override MultiMeasureRest #'expand-limit = 1
 
-	R1*47
+	R1*38
+	R1*4
+	R1*8
+	\relative c {
+	    r1
+		d8 f a d~				d4. r8
+		c8 a f a~				a4. r8
+		g8 a b a				r g f r
+		e8 f g f				r e d r
+		c4.    a4.                  g4
+		e4.    d4.                  c4
+		d1
+		r1
+		r1
+		r1 r1 r1 r1 r1 r1 r1 r1 r1 r1 r1 r1
+		d4\espressivo r f\espressivo  a		\espressivo	
+		g\espressivo r a\espressivo b\espressivo
+		c\espressivo  r b\espressivo a\espressivo			
+		g\espressivo r a\espressivo r
+		f2.\espressivo r4
+		d'2.\espressivo r4
+		b2.\espressivo r4
+		c2.\espressivo r4
+		a2.\espressivo r4
+		d,\espressivo  e\espressivo f\espressivo  a \espressivo
+		d,1\espressivo
+		r1
+		r1 r1 r1 r1 r1 r1
+		r1 r1 r1
+		r1 r1 r1 r1 r1
+	}
 
 	\bar "|."
 }
@@ -203,7 +282,7 @@ piece-one-rmiep-left = {
         composer    = "music by Genesis"
         arranger    = "(transcribed by gos95 for study purposes)"
         enteredby   = "gos95"
-        piece       = \markup { "Lover's Leap" \bold \smaller { (\note #"4"#1 = 128) } }
+        piece       = \markup { "Lover's Leap" \bold \smaller { (\note #"4"#1 = 126) } }
 %		copyright   = "Copyright (c) 2018 Alessandro Fraschetti (mail: gos95@gommagomma.net)"
         tagline     = ""
     }
@@ -223,7 +302,7 @@ piece-one-rmiep-left = {
         >>
     >>
     \layout { \context { \override VerticalAlignment #'forced-distance = #8 } }
-    \midi { \context { \Score tempoWholesPerMinute = #(ly:make-moment 128 4) } }
+    \midi { \context { \Score tempoWholesPerMinute = #(ly:make-moment 126 4) } }
     }
 }
 % ===========================================================================================================
