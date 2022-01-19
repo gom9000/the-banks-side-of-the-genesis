@@ -40,58 +40,6 @@
 % -----------------------------------------------------------------------------------------------------------
 % PIECE-ONE : LOVER'S LEAP
 % -----------------------------------------------------------------------------------------------------------
-soloistTema = \relative c'' {
-    r4  fis4~ \<
-	\bar "||"
-    fis2~ \! \pp
-	fis2
-	g2~
-	g2
-    fis2~
-	fis2
-	g2
-	e2
-	d4.	a8~
-	a8 c4 a8~
-	a8 a8 g4
-	cis2~
-	cis2~
-	cis4	dis4
-	cis4	dis4
-	fis2~
-	fis2
-}
-% ----------------------------------------------------------------------------
-% RMI TEMA
-% ----------------------------------------------------------------------------
-rmiRightTema = \relative c' {
-% \staccato
-}
-rmiLeftTema = \relative c {
-}
-% -----------------------------------------------------------------------------------------------------------
-% PIECE-TWO : THE GUARANTEED ETERNAL SANCTUARY MAN
-% -----------------------------------------------------------------------------------------------------------
-% -----------------------------------------------------------------------------------------------------------
-% PIECE-TREE : IKHNATON AND ITSACON...
-% -----------------------------------------------------------------------------------------------------------
-% -----------------------------------------------------------------------------------------------------------
-% PIECE-FOUR : HOW DARE I BE SO VEAUTIFUL
-% -----------------------------------------------------------------------------------------------------------
-% -----------------------------------------------------------------------------------------------------------
-% PIECE-FIVE : WILLOW FARM
-% -----------------------------------------------------------------------------------------------------------
-% -----------------------------------------------------------------------------------------------------------
-% PIECE-SIX : APOCALYPSE IN 9/8
-% -----------------------------------------------------------------------------------------------------------
-% -----------------------------------------------------------------------------------------------------------
-% PIECE-SEVEN : AS SURE AS EGGS IS EGGS
-% -----------------------------------------------------------------------------------------------------------
-
-
-% ===========================================================================================================
-% --------------------------------------------  B U I L D  --------------------------------------------------
-% ===========================================================================================================
 piece-one-guitar = {
 	\clef violin
 	\key c \major
@@ -222,6 +170,7 @@ piece-one-rmiep-right = {
 		bes a g a  		bes a g a		bes a g a 			bes a g a
 		bes a g a 		bes a g a		bes a g f			g a bes r
 		a1
+		r1 r1 r1
 	}
 
 	\bar "|."
@@ -236,7 +185,7 @@ piece-one-rmiep-left = {
 
 	R1*38
 	R1*4
-	R1*8
+	R1*16
 	\relative c {
 	    r1
 		d8 f a d~				d4. r8
@@ -264,45 +213,212 @@ piece-one-rmiep-left = {
 		r1 r1 r1 r1 r1 r1
 		r1 r1 r1
 		r1 r1 r1 r1 r1
+		r1 r1 r1
 	}
 
 	\bar "|."
 }
+% -----------------------------------------------------------------------------------------------------------
+% PIECE-TWO : THE GUARANTEED ETERNAL SANCTUARY MAN
+% -----------------------------------------------------------------------------------------------------------
+piece-two-guitar = {
+	\clef violin
+	\key c \major
+    \time 4/4
+
+    \set Score.skipBars = ##t
+	\override MultiMeasureRest #'expand-limit = 1
+
+	\relative c' {
+	    \set TabStaff.minimumFret = #3
+        \set TabStaff.restrainOpenStrings = ##t
+	    R1*4 ^\markup { \tiny { "12-string guitar" } }
+		R1*5
+	    \time 3/4 r2. \time 2/4 r2
+		\time 4/4 R1*2
+		\bar "||"
+	}
+}
+piece-two-hammond-upper = {
+	\clef violin
+	\key c \major
+    \time 4/4
+
+    \set Score.skipBars = ##t
+	\override MultiMeasureRest #'expand-limit = 1
+
+	R1*4 ^\markup { \tiny { "668488000 (perc. 2nd)" } }
+	R1*5
+	\time 3/4 r2. \time 2/4 r2
+	\time 4/4 R1*2
+	R1*4
+	R1*3
+	\relative c' {
+	    f8 g a4~ a2. r4 a8 b c r
+	    b1
+	    \times 2/3 {d8[ b d]} \times 2/3 {f[ d f]} \times 2/3 {gis[ f gis]} \times 2/3 {b[ gis b]}
+
+		\repeat volta 2 {
+		    a2 r4 cis,8 d
+			e8 r a,8 b cis8 r e,8 gis
+			<e a>2 r4 <e gis>8 <e a>
+			<e b'>4 <e a>8 <e b'> <e cis'>4 b'8 cis
+			<g b d>4 r8 <b d g> <b d g>4 r8 <g b d>8
+			<g b d>4 r8 <b d g> <b d g>4 r4
+			<d g b>4 r8 <b d g> <b d g>4 r8 <d g b>8 
+			<g b d>4 r8 <d g b>8 <g b d>8 <d g b>8 <g b d>8 r
+			a2 r4 \times 2/3 {a,8 cis e}
+			a8 r \times 2/3 {a, cis e} a8 r \times 2/3 {a, cis e}
+			a4~ <e a>~ <d a'>~ <e a>
+			\times 2/3 {a,8 cis e} a8 r \times 2/3 {a, cis e} a8 r
+			r2. b,4
+			cis2 d4 e8 r
+			\appoggiatura {e,8} fis4 e e d
+			\appoggiatura {fis8} gis4 fis e r
+			c4 e g b
+			a4 r fis8 d fis a
+        } \alternative {
+	    { 
+			c4 e g~ <g b>~
+			<d g b>2~ <d g b>8 <d fis a>4.
+	    }
+	    {
+			c,4 f a c,
+			b'4 r2.
+	    }
+		}
+	}
+	\bar "|."
+}
+piece-two-hammond-lower = {
+	\clef bass
+	\key c \major
+    \time 4/4
+
+    \set Score.skipBars = ##t
+	\override MultiMeasureRest #'expand-limit = 1
+
+	R1*4 ^\markup { \tiny { "006644222" } }
+	R1*5
+	\time 3/4 r2. \time 2/4 r2
+	\time 4/4 R1*2
+	R1*4
+	R1*3
+    \relative c {
+	    r1 r1 r1 r1
+
+		\repeat volta 2 {
+		    <a cis e>1~
+			<a cis e>1~
+			<a cis e>1~
+			<a cis e>1
+			<g b d>1~
+			<g b d>1~
+			<g b d>1~
+			<g b d>1
+			<a cis e>1~
+			<a cis e>1~
+			<a cis e>1~
+			<a cis e>1
+			<g b d>1~
+			<g b d>1
+			<fis b d>1
+			<gis cis e>1
+			<g c e>1
+			<fis a d>1
+        } \alternative {
+	    { 
+			<g c e>1
+			<g b d>2~ <g b d>8 <fis a d>4.
+	    }
+	    {
+			<f a c>1
+			r1
+	    }
+		}
+	}
+	\bar "|."
+}
+% -----------------------------------------------------------------------------------------------------------
+% PIECE-TREE : IKHNATON AND ITSACON...
+% -----------------------------------------------------------------------------------------------------------
+% -----------------------------------------------------------------------------------------------------------
+% PIECE-FOUR : HOW DARE I BE SO VEAUTIFUL
+% -----------------------------------------------------------------------------------------------------------
+% -----------------------------------------------------------------------------------------------------------
+% PIECE-FIVE : WILLOW FARM
+% -----------------------------------------------------------------------------------------------------------
+% -----------------------------------------------------------------------------------------------------------
+% PIECE-SIX : APOCALYPSE IN 9/8
+% -----------------------------------------------------------------------------------------------------------
+% -----------------------------------------------------------------------------------------------------------
+% PIECE-SEVEN : AS SURE AS EGGS IS EGGS
+% -----------------------------------------------------------------------------------------------------------
+
+
+% ===========================================================================================================
+% --------------------------------------------  B U I L D  --------------------------------------------------
+% ===========================================================================================================
+
 
 
 % ===========================================================================================================
 % ---------------------------------------------  B O O K  ---------------------------------------------------
 % ===========================================================================================================
-\book {
-    \header {
-        title       = \markup {\larger "SUPPER'S READY"}
-        subtitle    = ""
-        subsubtitle = "from the album Seconds Out (1977)"
-        instrument  = "keyboards and 12-string"
-        composer    = "music by Genesis"
-        arranger    = "(transcribed by gos95 for study purposes)"
-        enteredby   = "gos95"
-        piece       = \markup { "Lover's Leap" \bold \smaller { (\note #"4"#1 = 126) } }
-%		copyright   = "Copyright (c) 2018 Alessandro Fraschetti (mail: gos95@gommagomma.net)"
-        tagline     = ""
+\header {
+    title       = \markup {\larger "SUPPER'S READY"}
+    subtitle    = ##f
+    subsubtitle = "from the album Seconds Out (1977)"
+    instrument  = "keyboards and 12-string"
+    composer    = "music by Genesis"
+    arranger    = "(transcribed by gos95 for study purposes)"
+    enteredby   = "gos95"
+%	 copyright   = "Copyright (c) 2018 Alessandro Fraschetti (mail: gos95@gommagomma.net)"
+    tagline     = ##f
+}
+\bookpart {
+	% PIECE-ONE : LOVER'S LEAP
+    \score {
+        \header {
+            piece = \markup { "I. Lover's Leap" \bold \smaller { (\note #"4"#1 = 126) } }
+        }
+	    <<
+            \new TabStaff = "12-string" \with { midiInstrument = #"acoustic guitar (steel)" \override StaffSymbol #'staff-space = #(magstep -2) }
+            <<
+                \set TabStaff.instrumentName = \markup { "12-string" }
+                \piece-one-guitar
+            >>
+            \new PianoStaff = "RMIEP" \with {midiInstrument = #"acoustic guitar (nylon)" }
+            <<
+                \set PianoStaff.instrumentName = "RMIEP"
+                \new Staff = upper \piece-one-rmiep-right
+	            \new Staff = lower \piece-one-rmiep-left
+            >>
+		>>
+		\layout { \context { \override VerticalAlignment #'forced-distance = #8 } }
+        \midi { \context { \Score tempoWholesPerMinute = #(ly:make-moment 126 4) } }
     }
 
+	% PIECE-TWO : THE GUARANTEED ETERNAL SANCTUARY MAN
     \score {
-    <<
-        \new TabStaff = "12-string" \with { midiInstrument = #"acoustic guitar (steel)" \override StaffSymbol #'staff-space = #(magstep -2) }
-        <<
-            \set TabStaff.instrumentName = \markup { "12-string" }
-            \piece-one-guitar
-        >>
-        \new PianoStaff = "RMIEP" \with {midiInstrument = #"acoustic guitar (nylon)" }
-        <<
-            \set PianoStaff.instrumentName = "RMIEP"
-            \new Staff = upper \piece-one-rmiep-right
-	        \new Staff = lower \piece-one-rmiep-left
-        >>
-    >>
-    \layout { \context { \override VerticalAlignment #'forced-distance = #8 } }
-    \midi { \context { \Score tempoWholesPerMinute = #(ly:make-moment 126 4) } }
+        \header {
+            piece = \markup { "II. The Guaranteed Eternal Sanctuary Man" \bold \smaller { (\note #"4"#1 = 138) } }
+		}
+	    <<
+            \new TabStaff = "12-string" \with { midiInstrument = #"acoustic guitar (steel)" \override StaffSymbol #'staff-space = #(magstep -2) }
+            <<
+                \set TabStaff.instrumentName = \markup { "12-string" }
+                \piece-two-guitar
+            >>
+            \new PianoStaff = "Hammond" \with {midiInstrument = #"drawbar organ" }
+            <<
+                \set PianoStaff.instrumentName = "Hammond"
+                \new Staff = upper \piece-two-hammond-upper
+	            \new Staff = lower \piece-two-hammond-lower
+            >>
+		>>
+        \layout { \context { \override VerticalAlignment #'forced-distance = #8 } }
+        \midi { \context { \Score tempoWholesPerMinute = #(ly:make-moment 138 4) } }
     }
 }
 % ===========================================================================================================
