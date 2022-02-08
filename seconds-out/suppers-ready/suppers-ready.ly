@@ -255,7 +255,7 @@ piece-two-hammond-upper = {
 	R1*3
 	\relative c' {
 	    f8 g a4~ a2. r4 a8 b c r
-	    b1
+	    b2. r4
 	    \times 2/3 {d8[ b d]} \times 2/3 {f[ d f]} \times 2/3 {gis[ f gis]} \times 2/3 {b[ gis b]}
 
 		\repeat volta 2 {
@@ -269,7 +269,7 @@ piece-two-hammond-upper = {
 			<g b d>4 r8 <d g b>8 <g b d>8 <d g b>8 <g b d>8 r
 			a2 r4 \times 2/3 {a,8 cis e}
 			a8 r \times 2/3 {a, cis e} a8 r \times 2/3 {a, cis e}
-			a4~ <e a>~ <d a'>~ <e a>
+			a4~ <e a>~ <d e a>~ <e a>
 			\times 2/3 {a,8 cis e} a8 r \times 2/3 {a, cis e} a8 r
 			r2. b,4
 			cis2 d4 e8 r
@@ -298,17 +298,19 @@ piece-two-hammond-lower = {
     \set Score.skipBars = ##t
 	\override MultiMeasureRest #'expand-limit = 1
 
-	R1*4 ^\markup { \tiny { "006644222" } }
+	R1*4 ^\markup { \tiny { "006644000" } }
 	R1*5
 	\time 3/4 r2. \time 2/4 r2
 	\time 4/4 R1*2
 	R1*4
 	R1*3
     \relative c {
-	    r1 r1 r1 r1
+	    f8 g a4~ a2. r4 a8 b c r
+	    b2. r4
+		r1
 
 		\repeat volta 2 {
-		    <a cis e>1~
+		    <a, cis e>1~
 			<a cis e>1~
 			<a cis e>1~
 			<a cis e>1
@@ -340,11 +342,296 @@ piece-two-hammond-lower = {
 	\bar "|."
 }
 % -----------------------------------------------------------------------------------------------------------
-% PIECE-TREE : IKHNATON AND ITSACON...
+% PIECE-THREE : IKHNATON AND ITSACON AND THEIR BAND OF MERRY MEN
 % -----------------------------------------------------------------------------------------------------------
+piece-three-prosoloist = {
+	\clef violin
+	\key c \major
+    \time 4/4
+
+    \set Score.skipBars = ##t
+	\override MultiMeasureRest #'expand-limit = 1
+
+	% FLUTE INTRO
+	\relative c''' {
+	    r1 ^\markup { \tiny { "flute" } }
+		a4. a4. a4
+		a8 b fis2.
+		gis4. a b4
+		dis,4. e fis4
+		r2 fis8 fis fis g~
+		g4 fis2 fis4
+		ais4 b8 fis4. gis4
+		ais2. r4
+
+		a4. a4. a4
+		a8 b fis2.
+		gis4. a b4
+		dis,4. e fis4~
+		fis1
+	}
+
+	% WEARING FEELINGS...
+	R1*14
+
+	% WAITING FOR BATTLE...
+	\relative c'' {
+	    r2 ^\markup { \tiny { "trumpet (brillance 0%)" } }
+			fis16 d  a d  a fis a fis
+		d8 r r2.
+		r2 fis'16 d  a d  a fis a fis
+		d8 r r d16 e fis8 r r fis16 g
+		a8 d4 r8   fis16 d  a d  a fis a fis
+		d8 r r d16 e fis8 r r fis16 g
+		a8 d4 r8   fis16 d  a d  a fis a fis
+
+		d2~ d8 cis d e
+		fis g a b a2~
+		a8 d cis b a g fis g
+		a b a4 d,4. cis8
+		d e a,4 b8 cis d4
+		e4 fis8 a g b a cis
+		b d cis e d fis e g
+		fis a g e fis d cis4
+
+		d2~ d8 cis d e
+		fis g a b a2~
+		a8 d, cis b a g fis g
+		a b a4 d,4. cis8
+		d e a,4 b8 cis d4
+		e4 d2 r4
+
+		r1 r1 r1 r1
+	}
+
+	% MY PRAYER CAPSULE...
+	R1*8
+	R1*2
+	R1*4
+	R1*6
+	R1*4
+	\relative c'' {
+	    fis16 ^\markup { \tiny { "trumpet (brillance 100%)" } }
+			 d a d		g d a d		a' d, a d		g a, g' a,
+		fis' d a d		g d a d		a' d, a d		g a, g' a,
+		fis' d a d		g d a d		a' d, a d		g a, g' a,
+		fis' d a d		g d a d		a' d, a d		g8 r8
+
+		g16 e b e		a e b e		b' e, b e		a b, a' b,
+		g' e b e		a e b e		b' e, b e		a b, a' r
+
+		cis a e a		d a e a		e' a, e a		d e, d' e,
+		cis' a e a		d a e a		e' a, e a		d8 r8
+		d4.	d,4. d,4. d,4. d,2
+	}
+
+	% TODAY'S A DAY TO CELEBRATE...
+}
+piece-three-hammond-upper = {
+	\clef violin
+	\key c \major
+    \time 4/4
+
+    \set Score.skipBars = ##t
+	\override MultiMeasureRest #'expand-limit = 1
+
+	% FLUTE INTRO
+	\relative c' {
+	    R1*14 ^\markup { \tiny { "668488000 (perc. 2nd)" } }
+	}
+
+	% WEARING FEELINGS...
+	\relative c' {
+	    e1
+		d4 fis,8 g a4 d~
+		d4 cis8 d e4 a8 r
+		e1
+		d4 fis,8 g a4 d~
+		d4 cis8 d e4 a8 r
+		e'1
+		d4 fis,8 g a4 d~
+		d4 cis8 d e4 a8 r
+		e,4 f g a
+		b c d e
+		f g a b
+		c d e f
+		fis2 d4 r
+		\break
+	}
+
+	% WAITING FOR BATTLE...
+	R1*7
+	R1*14
+	\relative c' {
+	    e4 f g a
+		b c d e
+		\appoggiatura {d8} e d c d \appoggiatura {d8} e d c d
+		\appoggiatura {d8} e d c d \appoggiatura {d8} e4 r4
+		\break
+	}
+
+	% MY PRAYER CAPSULE...
+	\relative c' {
+	    <d fis a>4 r4  \acciaccatura {fis8 a d~} <fis, a d>8 <d fis a> <d fis a> <b d g>~
+		<b d g>8 <a d fis>4 <b d g>4 <d g b>4 r8
+		<d fis a>4 r4  \acciaccatura {fis8 a d~} <fis, a d>8 <d fis a> <d fis a> <a d fis>~
+		<a d fis>8 <b d g>4 <d g b>4 <fis a d>4 <d g b>8
+		<d fis a>4 r4  \acciaccatura {fis8 a d~} <fis, a d>8 <d fis a> <d fis a> <b d g>~
+		<b d g>8 <a d fis>4 <b d g>4 <d g b>4 r8
+		<d fis a>4 r4  \acciaccatura {fis8 a d~} <fis, a d>8 <d fis a> <d fis a> <a d fis>~
+		<a d fis>8 <b d g>4 <d g b>4 <fis a d>4 <d g b>8
+
+		<d fis a>4 r8 <b g'>4 <a fis'> <d b'>8
+		<d fis a>4 r8 <cis a'>4 <b g'> <a fis'>8
+
+		\tuplet 3/2 {<d a' d fis>4 <d g c e>4 <d g c e>4 } <d g c e>2~
+		<d g c e>4 r8 <b' e g>8 <b e g>8 <a d fis>8 r4
+		\tuplet 3/2 {<d, a' d fis>4 <d g c e>4 <d g c e>4 } <d g c e>2~
+		<d g c e>4 r8 <b' e g>8 <b e g>8 <a d fis>8 r4
+		\break
+
+		r2 <fis d'>4 <e cis'>
+		<d b'> <e cis'> <b g'> <cis a'>
+		<d b'> <e cis'> <a, fis'> <b g'>
+		<cis a'> <d b'> <cis a'>4 r4
+		<fis d'>4 <e cis'> <fis d'> <g e'>
+		<a fis'>2 <fis d'>4 r4
+
+		<d fis a>2 <fis a d>4 <d fis a>
+		r8 <b d g>4. <d g b>2 
+		<d fis a>2 <fis a d>4 <d fis a>
+		r8 <b d g>4. <d g b>4 r4
+		\break
+	}
+	R1*10
+
+	% TODAY'S A DAY TO CELEBRATE...
+	R1*2
+	R1*2
+}
+piece-three-hammond-lower = {
+	\clef violin
+	\key c \major
+    \time 4/4
+
+    \set Score.skipBars = ##t
+	\override MultiMeasureRest #'expand-limit = 1
+
+	% FLUTE INTRO
+    \relative c'' {
+	    <c e fis>1~\fermata ^\markup { \tiny { "006644000" } }
+		<c e fis>1~
+		<c e fis>~
+		<b e fis>~
+		<b dis fis>~
+		<b d fis>~
+		<b d fis>~
+		<b cis fis>4.~ <ais cis fis>4.~ <b cis fis>4~
+		<ais cis fis>1~
+	
+	    <c e fis>1~
+		<c e fis>~
+		<b e fis>~
+		<b dis fis>~
+		<b dis fis>1
+		\bar "||"
+	}
+
+	% WEARING FEELINGS...
+	\clef bass
+    R1*14
+
+	% WAITING FOR BATTLE...
+	R1*7
+	\relative c {
+		d2~ d8 cis d e
+		fis g a b a2~
+		a8 d cis b a g fis g
+		a b a4 d,4. cis8
+		d e a,4 b8 cis d4
+		e4 fis8 a g b a cis
+		b d cis e d fis e g
+		fis a g e fis d cis4
+
+		d2~ d8 cis d e
+		fis g a b a2~
+		a8 d, cis b a g fis g
+		a b a4 d,4. cis8
+		d e a,4 b8 cis d4
+		e4 d2 r4
+
+		r1 r1 r1 r1
+	}
+
+	% MY PRAYER CAPSULE...
+	R1*8
+    \relative c {
+		<d fis a>4 r8 <b g'>4 <a fis'> <d b'>8
+		<d fis a>4 r8 <cis a'>4 <b g'> <a fis'>8
+	}
+	R1*4
+	\relative c {
+		r2 <fis d'>4 <e cis'>
+		<d b'> <e cis'> <b g'> <cis a'>
+		<d b'> <e cis'> <a, fis'> <b g'>
+		<cis a'> <d b'> <cis a'>4 r4
+		<fis d'>4 <e cis'> <fis d'> <g e'>
+		<a fis'>2 <fis d'>4 r4
+	}
+	R1*4
+	R1*10
+	\break
+
+	% TODAY'S A DAY TO CELEBRATE...
+	R1*2
+	\clef violin
+	\relative c' {
+	    \repeat volta 12 {
+		    fis'16 d a d	g d a d		a' d, a d		fis a, fis' a,
+		    g' e b e		a e b e		b' e, b e		g b, g' b,
+			\override Score.RehearsalMark #'break-visibility = #begin-of-line-invisible \override Score.RehearsalMark #'self-alignment-X = #RIGHT \mark "12 volte"
+		}
+		c a f a			d a f a			e' a, f a			d a f a
+		c g e g			d' g, e g		e' g, e g			d' g, e g
+		c a e a			d a e a			e' a, e a			d a e a
+		e' a, fis a		e' a, fis a		d a fis a			d a fis a
+		\repeat volta 2 {
+		    e' a, f a\>		d a f a			e' a, f a			d a f a
+			e' a, fis a		e' a, fis a		d a fis a			d a fis a
+			e' a, fis a		e' a, fis a		d a fis a			d a fis a \!
+		}
+		r1 r1 r1
+		<b, c e>2..\< r8 \!
+		<a c e fis>2..\< r8\!
+	}
+
+	R1
+	\bar "|."
+}
 % -----------------------------------------------------------------------------------------------------------
-% PIECE-FOUR : HOW DARE I BE SO VEAUTIFUL
+% PIECE-FOUR : HOW DARE I BE SO BEAUTIFUL
 % -----------------------------------------------------------------------------------------------------------
+piece-four-hammond-upper = {
+	\clef violin
+	\key c \major
+    \time 4/4
+
+    \set Score.skipBars = ##t
+	\override MultiMeasureRest #'expand-limit = 1
+	r1
+}
+piece-four-hammond-lower = {
+	\clef violin
+	\key c \major
+    \time 4/4
+
+    \set Score.skipBars = ##t
+	\override MultiMeasureRest #'expand-limit = 1
+
+    \relative c' {
+	    <b c e>2..\< r8 \! ^\markup { \tiny { "006644000" } }
+	}
+}
 % -----------------------------------------------------------------------------------------------------------
 % PIECE-FIVE : WILLOW FARM
 % -----------------------------------------------------------------------------------------------------------
@@ -415,6 +702,45 @@ piece-two-hammond-lower = {
                 \set PianoStaff.instrumentName = "Hammond"
                 \new Staff = upper \piece-two-hammond-upper
 	            \new Staff = lower \piece-two-hammond-lower
+            >>
+		>>
+        \layout { \context { \override VerticalAlignment #'forced-distance = #8 } }
+        \midi { \context { \Score tempoWholesPerMinute = #(ly:make-moment 138 4) } }
+    }
+
+	% PIECE-THREE : IKHNATON AND ITSACON AND THEIR BAND OF MERRY MEN
+    \score {
+        \header {
+            piece = \markup { "III. Ikhnaton and Itsacon and Their Band of Merry Men" \bold \smaller { (\note #"4"#1 = 138) } }
+		}
+	    <<
+            \new Staff = "Prosoloist" \with { midiInstrument = #"trumpet" }
+            <<
+                \set Staff.instrumentName = \markup { "Prosoloist" }
+                \piece-three-prosoloist
+            >>
+            \new PianoStaff = "Hammond" \with {midiInstrument = #"drawbar organ" }
+            <<
+                \set PianoStaff.instrumentName = "Hammond"
+                \new Staff = upper \piece-three-hammond-upper
+	            \new Staff = lower \piece-three-hammond-lower
+            >>
+		>>
+        \layout { \context { \override VerticalAlignment #'forced-distance = #8 } }
+        \midi { \context { \Score tempoWholesPerMinute = #(ly:make-moment 138 4) } }
+    }
+
+	% PIECE-FOUR : HOW DARE I BE SO BEAUTIFUL
+    \score {
+        \header {
+            piece = \markup { "IV. How Dare I be so Beautiful" \bold \smaller { (\note #"4"#1 = 138) } }
+		}
+	    <<
+            \new PianoStaff = "Hammond" \with {midiInstrument = #"drawbar organ" }
+            <<
+                \set PianoStaff.instrumentName = "Hammond"
+                \new Staff = upper \piece-four-hammond-upper
+	            \new Staff = lower \piece-four-hammond-lower
             >>
 		>>
         \layout { \context { \override VerticalAlignment #'forced-distance = #8 } }
