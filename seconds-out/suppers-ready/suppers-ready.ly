@@ -601,11 +601,10 @@ piece-three-hammond-lower = {
 			e' a, fis a		e' a, fis a		d a fis a			d a fis a \!
 		}
 		r1 r1 r1
-		<b, c e>2..\< r8 \!
+		<b, c e g>2..\< r8 \!
 		<a c e fis>2..\< r8\!
 	}
 
-	R1
 	\bar "|."
 }
 % -----------------------------------------------------------------------------------------------------------
@@ -629,7 +628,34 @@ piece-four-hammond-lower = {
 	\override MultiMeasureRest #'expand-limit = 1
 
     \relative c' {
-	    <b c e>2..\< r8 \! ^\markup { \tiny { "006644000" } }
+	    \time 8/4
+	    \repeat volta 4 {
+	        <b c e g>1~ \< ^\markup { \tiny { "006644000" } } <b c e g>2.. r8 \! 
+		    <a c e fis>1~ \< <a c e fis>2.. r8\!
+			\override Score.RehearsalMark #'break-visibility = #begin-of-line-invisible \override Score.RehearsalMark #'self-alignment-X = #RIGHT \mark "4 volte"
+		}
+		\time 6/4
+	    \repeat volta 2 {
+	        <g b d fis>1~ \< <g b d fis>4. r8 \! 
+		    <g b cis e>1~ \< <g b cis e>4. r8\!
+		}
+		\time 8/4
+		\repeat volta 2 {
+	        <b c e g>1~ \< <b c e g>2.. r8 \! 
+		    <a c e fis>1~ \< <a c e fis>2.. r8\!
+		}
+		\time 6/4
+	    \repeat volta 2 {
+	        <g b d fis>1~ \< <g b d fis>4. r8 \! 
+		    <g b cis e>1~ \< <g b cis e>4. r8\!
+		}
+		\time 8/4
+		\repeat volta 2 {
+	        <b c e g>1~ \< <b c e g>2.. r8 \! 
+		    <a c e fis>1~ \< <a c e fis>2.. r8\!
+		}
+		<fis cis' fis>1~ \< <fis cis' fis>1
+		r1 \! r1\fermata
 	}
 }
 % -----------------------------------------------------------------------------------------------------------
@@ -733,7 +759,7 @@ piece-four-hammond-lower = {
 	% PIECE-FOUR : HOW DARE I BE SO BEAUTIFUL
     \score {
         \header {
-            piece = \markup { "IV. How Dare I be so Beautiful" \bold \smaller { (\note #"4"#1 = 138) } }
+            piece = \markup { "IV. How Dare I be so Beautiful" \bold \smaller { (\note #"4"#1 = 100) } }
 		}
 	    <<
             \new PianoStaff = "Hammond" \with {midiInstrument = #"drawbar organ" }
@@ -744,7 +770,7 @@ piece-four-hammond-lower = {
             >>
 		>>
         \layout { \context { \override VerticalAlignment #'forced-distance = #8 } }
-        \midi { \context { \Score tempoWholesPerMinute = #(ly:make-moment 138 4) } }
+        \midi { \context { \Score tempoWholesPerMinute = #(ly:make-moment 100 4) } }
     }
 }
 % ===========================================================================================================
