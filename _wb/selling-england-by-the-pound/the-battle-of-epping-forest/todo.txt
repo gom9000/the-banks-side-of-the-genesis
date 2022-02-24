@@ -1,0 +1,8 @@
+TBOEF:
+------
+
+- Modifica rivolti accordi organo.
+- Modifica raggruppamento semicrome arpeggi organo.
+- Scrivi parte centrale chitarra + rientro.
+- Scrivi pre-finale organo + synth.
+- Scrivi finale organo + mellotron.
