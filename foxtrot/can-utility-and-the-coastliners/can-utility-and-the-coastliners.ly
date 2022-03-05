@@ -77,7 +77,7 @@ mellotronFlute = \relative c' {
   <dis fis b>2)
 
   r2
-  r4 <e g bes>4(
+  <e g bes>2(
   <dis fis b>4.) r8
 }
 % -----------------------------------------------------------------------------------------------------------
@@ -194,30 +194,30 @@ pianetNotes = \relative c' {
 % -----------------------------------------------------------------------------------------------------------
 mellotronViolins = \relative c' {
   r1 r1 r1 r1 r1 r1
-  d1
+  d1~\espressivo
   d1
   r1
   r1
   <a d a' d f>2 <bes e bes' d g>2
-  <c f c' f a>2~ <d f d' f bes>4~ <c f c' f a>4~
-  <c f c' f a>4 <d g d' g b>4 <c e g c e g>2
-  <a cis a' cis e>2~ <a d a' d f>2
-  <d e d' e g>2~ <cis e cis' e>4~ <bes e cis' e>4
-  <a d f a d f>1~
-  <a d f a d f>2 r2
+  <c f c' f a>2~ <d f d' f bes>4~ <c f c' f a>4
+  <c f c' f a>4 <d g d' g b>4 <c e c' e g>2
+  <cis e a cis e>2~ <d f a d f>2~
+  <d g d' e g>2~ <b cis e' g>4~ <bes cis bes' cis>4
+  <a d a' d f>1~
+  <a d a' d f>2 r2
 
   <d f'>4 <e g'>4 <f a'>4 <e g'>8 <d f'>8
   <f a'>4 <g bes'>4 <a c'>2
   <cis e'>4 <a c'>4 <g bes'>4 <f a'>8 <e g'>8
   <f a'>2 <e g'>2
 
-  <e e'>2.~ <e e' f>4
-  <d d' f>2~<d d'>2
-  <d d'>2.~ <d d' e>4
-  <c c' e>2~<c c'>2
-  <c c'>2.~ <c c' d>4
-  <bes bes' d>2~<bes g' bes d>2~
-  <a a' d>2~<a g' d'>2
+  e'2.~ <e f>4~
+  <d f>1
+  d2.~ <d e>4~
+  <c e>1
+  c2.~ <c d>4~
+  <bes d>2~ <g bes>2
+  <e a>2~<e g>2
   <bes f' f'>4~<bes e e'>4~<bes g' g'>4~<bes f' f'>4~
   <bes a' a'>4~<bes g' g'>4~<bes bes' bes'>4~<bes a' a'>4
   <a a' a'>1~
@@ -226,8 +226,8 @@ mellotronViolins = \relative c' {
   r1
   r1
 
-  <bes f' d'>4~<bes e c'>4~<bes g' e'>4~<bes f' d'>4~
-  <bes a' f'>4~<bes g' e'>4~<bes bes' g'>4~<bes a' f'>4
+  <bes d d'>4~<bes c c'>4~<bes e e'>4~<bes d d'>4~
+  <bes f' f'>4~<bes e e'>4~<bes g' g'>4~<bes f' f'>4
 }
 pianetViolins = \relative c'' {
   a1\espressivo
@@ -305,7 +305,7 @@ hammondUpperPart = {
 
 	% MELLOTRON-VIOLINS-SOLO
     \time 4/4
-    \tempo "" 4 = 90
+    \tempo "" 4 = 92
     R1*36
 
     % HAMMOND&MELLOTRON
@@ -339,7 +339,6 @@ hammondLowerPart = {
 
 	% MELLOTRON-VIOLINS-SOLO
     \time 4/4
-    \tempo "" 4 = 90
     R1*36
 
     % HAMMOND&MELLOTRON
@@ -369,7 +368,6 @@ mellotronPart = {
 
 	% MELLOTRON-VIOLINS-SOLO
     \time 4/4
-    \tempo "" 4 = 90
     \mellotronViolins
 
     % HAMMOND&MELLOTRON
@@ -398,7 +396,6 @@ pianetPart = {
     \pianetNotes
 
 	\time 4/4
-    \tempo "" 4 = 90
 	\pianetViolins
 }
 % ===========================================================================================================
@@ -414,7 +411,7 @@ pianetPart = {
         composer    = "music by Genesis"
         arranger    = "(transcribed by gos95 for study purposes)"
         enteredby   = "gos95"
-        piece       = \markup { \bold "                             " \smaller { (\note #"4"#1 = 72) } }
+        piece       = \markup { \bold "                             " \smaller { (\note #"4"#1 = 76) } }
 %		copyright   = "Copyright (c) 2018 Alessandro Fraschetti (mail: gos95@gommagomma.net)"
         tagline     = ""
     }
@@ -439,7 +436,7 @@ pianetPart = {
         >>
     >>
     \layout { \context { \override VerticalAlignment #'forced-distance = #8 } }
-    \midi { \context { \Score tempoWholesPerMinute = #(ly:make-moment 100 4) } }
+    \midi { \context { \Score tempoWholesPerMinute = #(ly:make-moment 76 4) } }
     }
 }
 % ===========================================================================================================
